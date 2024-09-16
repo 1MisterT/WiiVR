@@ -1,0 +1,42 @@
+## Timeline:
+- Game Basics:
+	- Maus Bewegung -> Umschauen
+	- Stärke Timer: Maus Click Timer für Kraft von Golf/Bowlingschlag
+	- Spiel Auswahl
+- Golf Basics:
+	- Schläger hinter dem Ball bewegen -> 2 D um Ball herum
+	- Schlagkraft mit Maus Timer bestimmen
+	- Ball rollt und kann in Loch fallen
+	- Loch getroffen win event
+- Bowling Basics:
+	- Ball rollen -> Maus bewegung Links <-> Rechts an der Bahn
+	- Schwungkraft mit Maus TImer bestimmen
+	- Pins Physik 
+	- Pins umkegeln gibt Punkte
+- UI:
+	- Homescreen
+	- Win screen
+	- Pause
+	- Game Auswahl
+	- Einstellungen
+- Golf und Bowling Refinement:
+	- Golf automatische Kurse
+	- Golf Animation -> Flagge bei neuem Loch und evlt Kamerafahrt zu neuer Ballposition
+	- Bowling Randspiel
+	- Bowling Animation -> Pins aufstellen + Recap Cam
+- 3D Assets:
+	- Richtige 3D Assets einbinden 
+	- Textur und Collision Box 
+- Sounds:
+	- Background
+	- Golfanschlag
+	- Bowling Pins umfallen, ball rollen
+	- Win Sound, evlt verschiedenen 
+	- Lost Sound
+	- Click Geräuch
+- VR:
+	- VR umschauen
+	- Schläger in der Hand, Position um Ball auswählen 
+	- Schlagkraft auf Hand mappen
+	- Bowling mit Händen Links <-> Rechts bewegen
+	- Handkraft -> Wurfkurve + Kraft
