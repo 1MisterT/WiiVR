@@ -60,6 +60,7 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
+<<<<<<< HEAD
     "com.unity.inputsystem": {
       "version": "1.7.0",
       "depth": 1,
@@ -76,6 +77,8 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
+=======
+>>>>>>> origin/BasicMovement
     "com.unity.performance.profile-analyzer": {
       "version": "1.2.2",
       "depth": 1,
@@ -151,6 +154,7 @@
       },
       "url": "https://packages.unity.com"
     },
+<<<<<<< HEAD
     "com.unity.xr.core-utils": {
       "version": "2.3.0",
       "depth": 1,
@@ -241,6 +245,8 @@
       },
       "url": "https://packages.unity.com"
     },
+=======
+>>>>>>> origin/BasicMovement
     "com.unity.modules.ai": {
       "version": "1.0.0",
       "depth": 0,
