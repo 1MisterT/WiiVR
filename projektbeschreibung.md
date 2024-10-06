@@ -36,9 +36,9 @@ In unserem Projekt wollen wir Minispiele der Wii neu implementieren und mit VR S
 - Multiplayer Leaderboard
 
 ## 4. Gruppenaufteilung
-Alexander Mutsche - Sounddesign
-Jannis Götze - 3D Design
-Niklas Hoff - Programmierung
-Nikolaus Klemm  - Programmierung
-Tom Göttlich - Doku, Design
-Tom Tröger - Projektleitung, Programmierung
+- Alexander Mutschke - Sounddesign
+- Jannis Götze - 3D Design
+- Niklas Hoff - Programmierung
+- Nikolaus Klemm  - Programmierung
+- Tom Göttlich - Doku, Design
+- Tom Tröger - Projektleitung, Programmierung
