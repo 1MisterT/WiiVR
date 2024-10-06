@@ -1098,6 +1098,7 @@ GameObject:
   - component: {fileID: 393127219}
   - component: {fileID: 393127224}
   - component: {fileID: 393127225}
+  - component: {fileID: 393127226}
   m_Layer: 0
   m_Name: Right Controller
   m_TagString: Untagged
@@ -1470,6 +1471,18 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   m_PhysicsTriggerInteraction: 1
+--- !u!114 &393127226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 393127217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff7b223b4bf4f71dd855291ba7638682, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &500079436
 GameObject:
   m_ObjectHideFlags: 0
@@ -1931,6 +1944,7 @@ GameObject:
   - component: {fileID: 896883133}
   - component: {fileID: 896883132}
   - component: {fileID: 896883131}
+  - component: {fileID: 896883136}
   m_Layer: 0
   m_Name: Green Cube
   m_TagString: Untagged
@@ -2228,6 +2242,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 896883128}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &896883136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 896883128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff7b223b4bf4f71dd855291ba7638682, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &921389066
 GameObject:
   m_ObjectHideFlags: 0
