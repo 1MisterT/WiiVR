@@ -8,12 +8,21 @@ using UnityEngine.XR.Management;
 
 public class XRDeviceManager : MonoBehaviour
 {
-    private GameObject simulator;
+    private XRDeviceSimulator simulator;
 
     // Start is called before the first frame update
     void Start()
     {
-        DetectXRDevice();
+        simulator = FindObjectOfType<XRDeviceSimulator>();
+        if (simulator != null)
+        {
+            DetectXRDevice();
+        }
+        else
+        {
+            Debug.LogWarning("No XR Device Found");
+        }
+       
     }
 
     // Update is called once per frame
@@ -67,12 +76,10 @@ public class XRDeviceManager : MonoBehaviour
         // Disable the XR Device Simulator if Meta Quest is connected
         if (isQuestConnected)
         {
-            if (simulator != null)
-            {
                 // Disable the XR Device Simulator
-                simulator.SetActive(false); 
+                simulator.enabled = false; 
                 Debug.Log("Meta Quest detected: XR Device Simulator disabled.");
-            }
+            
         }
         else
         {
