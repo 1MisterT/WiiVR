@@ -3,37 +3,56 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
 using Unity.Mathematics;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 
 public class BowlingController : MonoBehaviour
 {
     // Start is called before the first frame update
-    private int2 _pinCounter;
-    private HashSet<GameObject> _knockedPins;
+    private HashSet<GameObject> _knockedPins = new HashSet<GameObject>();
+    public InputActionReference hardResetAction;
+    public InputActionReference softResetAction;
+
+    public int pinCounter
+    {
+        get => _knockedPins.Count;
+    } 
+
     void Start()
     {
-        _pinCounter = 0;
         _knockedPins = new HashSet<GameObject>();
-        StartCoroutine("Reset");
+        hardResetAction.action.performed += context => HardReset();
+        softResetAction.action.performed += context => SoftReset();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
     }
 
     public void KnockPin(GameObject knockedPin)
     {
-        _pinCounter += 1;
         _knockedPins.Add(knockedPin);
     }
 
-    public void Reset()
+    private void HardReset()
+    {
+        foreach (var pin in GetComponentsInChildren<BownlingPin>(includeInactive: true))
+        {
+            pin.Reset();
+        }
+        _knockedPins.Clear();
+    }
+
+    private void SoftReset()
     {
         foreach (var pin in _knockedPins)
         {
-            pin.GetComponent<BownlingPin>().Reset();
+            pin.SetActive(false);
         }
     }
+    
+    
 }

@@ -32,10 +32,12 @@ public class BownlingPin : MonoBehaviour
     }
 
     public void Reset()
-    {
+    {   
         _pin.transform.position = _originalPosition;
         _pin.transform.rotation = _originalRotation;
         _pin.velocity = Vector3.zero;
         _pin.angularVelocity = Vector3.zero;
+        gameObject.SetActive(true);
+        _isKnocked = false;
     }
 }

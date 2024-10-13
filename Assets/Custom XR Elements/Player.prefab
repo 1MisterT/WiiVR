@@ -1920,6 +1920,30 @@ PrefabInstance:
       propertyPath: m_PlayAudioClipOnSelectEntered
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7693184380767619946, guid: ad818c36731146e994540a1896ad8f24, type: 3}
+      propertyPath: m_Parameters.widthMultiplier
+      value: 0.005
+      objectReference: {fileID: 0}
+    - target: {fileID: 7693184380767619946, guid: ad818c36731146e994540a1896ad8f24, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[1].time
+      value: 0.9569059
+      objectReference: {fileID: 0}
+    - target: {fileID: 7693184380767619946, guid: ad818c36731146e994540a1896ad8f24, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[1].value
+      value: 1.0008304
+      objectReference: {fileID: 0}
+    - target: {fileID: 7693184380767619946, guid: ad818c36731146e994540a1896ad8f24, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[1].inSlope
+      value: 0.009799656
+      objectReference: {fileID: 0}
+    - target: {fileID: 7693184380767619946, guid: ad818c36731146e994540a1896ad8f24, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[1].inWeight
+      value: 0.12609626
+      objectReference: {fileID: 0}
+    - target: {fileID: 7693184380767619946, guid: ad818c36731146e994540a1896ad8f24, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[1].outSlope
+      value: 0.009799656
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2072,6 +2096,30 @@ PrefabInstance:
     - target: {fileID: 7462879561657043759, guid: ad818c36731146e994540a1896ad8f24, type: 3}
       propertyPath: m_HapticHoverEnterIntensity
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7693184380767619946, guid: ad818c36731146e994540a1896ad8f24, type: 3}
+      propertyPath: m_Parameters.widthMultiplier
+      value: 0.005
+      objectReference: {fileID: 0}
+    - target: {fileID: 7693184380767619946, guid: ad818c36731146e994540a1896ad8f24, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[1].time
+      value: 0.9569059
+      objectReference: {fileID: 0}
+    - target: {fileID: 7693184380767619946, guid: ad818c36731146e994540a1896ad8f24, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[1].value
+      value: 1.0008304
+      objectReference: {fileID: 0}
+    - target: {fileID: 7693184380767619946, guid: ad818c36731146e994540a1896ad8f24, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[1].inSlope
+      value: 0.009799656
+      objectReference: {fileID: 0}
+    - target: {fileID: 7693184380767619946, guid: ad818c36731146e994540a1896ad8f24, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[1].inWeight
+      value: 0.12609626
+      objectReference: {fileID: 0}
+    - target: {fileID: 7693184380767619946, guid: ad818c36731146e994540a1896ad8f24, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[1].outSlope
+      value: 0.009799656
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
