@@ -1,43 +1,39 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Bowling;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class BownlingPin : MonoBehaviour
+public class BownlingPin : BasicResettable
 {
     // Start is called before the first frame update
-    private Rigidbody _pin;
     private Boolean _isKnocked = false;
     public BowlingController bowlingController;
-    
-    private  Vector3 _originalPosition;
-    private Quaternion _originalRotation;
-    void Start()
+
+    protected override void Start()
     {
-        _pin = GetComponent<Rigidbody>();
-        _originalPosition = _pin.transform.position;
-        _originalRotation = _pin.transform.rotation;
+        base.Start();
+        if (bowlingController == null)
+        {
+            bowlingController = Component.FindObjectOfType<BowlingController>();
+        }
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (_isKnocked) return;
-        if (_pin.transform.up.y < 1.0f )
+        if (Rigidbody.transform.up.y < 0.5f )
         {
-            bowlingController.KnockPin(_pin.GameObject());
+            bowlingController.KnockPin(gameObject);
             _isKnocked = true;
         }
     }
 
-    public void Reset()
-    {   
-        _pin.transform.position = _originalPosition;
-        _pin.transform.rotation = _originalRotation;
-        _pin.velocity = Vector3.zero;
-        _pin.angularVelocity = Vector3.zero;
-        gameObject.SetActive(true);
+    public override void Reset()
+    {
+        base.Reset();
         _isKnocked = false;
     }
 }

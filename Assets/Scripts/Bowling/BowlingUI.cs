@@ -6,15 +6,17 @@ using UnityEngine;
 public class BowlingUI : MonoBehaviour
 {
     public BowlingController bowlingController;
+
+    private TextMeshProUGUI _counterText;
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        //GetComponent<TextMeshPro>().text = "Start Game";
+        _counterText = GetComponent<TextMeshProUGUI>();
     }
 
     // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
     {
-        gameObject.GetComponent<TextMeshProUGUI>().text = bowlingController.pinCounter.ToString();
+        _counterText.text = bowlingController.pinCounter.ToString();
     }
 }
