@@ -20,14 +20,14 @@ namespace Bowling
             }
         }
 
-        // private void OnTriggerStay(Collider collider)
-        // {
-        //     if (collider.attachedRigidbody is not null)
-        //     {
-        //         _rigidbody = collider.attachedRigidbody;
-        //         _rigidbody.velocity = direction;
-        //         
-        //     }
-        // }
+        private void OnTriggerStay(Collider collider)
+        {
+            if (collider.attachedRigidbody is not null)
+            {
+                _rigidbody = collider.attachedRigidbody;
+                _rigidbody.velocity = direction;
+
+            }
+        }
     }
 }
