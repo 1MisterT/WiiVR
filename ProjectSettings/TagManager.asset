@@ -7,6 +7,8 @@ TagManager:
   - GolfBall
   - GolfHole
   - Plane
+  - GolfClubChild
+  - GolfClubParent
   - GolfClub
   layers:
   - Default
@@ -19,7 +21,7 @@ TagManager:
   - Environment
   - Golf
   - PassThroughPlane
-  - IgnorePlaneLayer
+  - IgnoreHitLayer
   - 
   - 
   - 
