@@ -11,6 +11,7 @@ TagManager:
   - 
   - Water
   - UI
+  - Hidden
   - 
   - 
   - 
@@ -34,8 +35,7 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
+  - XR Simulation
   - 
   m_SortingLayers:
   - name: Default
