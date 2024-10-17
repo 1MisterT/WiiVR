@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - GolfBall
+  - GolfHole
+  - GolfClub
+  - Plane
   layers:
   - Default
   - TransparentFX
@@ -12,6 +16,7 @@ TagManager:
   - Water
   - UI
   - Hidden
+  - Golf
   - 
   - 
   - 
@@ -33,8 +38,7 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
+  - PassThroughPlane
   - XR Simulation
   - 
   m_SortingLayers:
