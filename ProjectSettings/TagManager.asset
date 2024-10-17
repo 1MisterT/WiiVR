@@ -6,8 +6,10 @@ TagManager:
   tags:
   - GolfBall
   - GolfHole
-  - GolfClub
   - Plane
+  - GolfClubChild
+  - GolfClubParent
+  - GolfClub
   layers:
   - Default
   - TransparentFX
@@ -16,29 +18,29 @@ TagManager:
   - Water
   - UI
   - Hidden
+  - Teleport
   - Golf
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
   - PassThroughPlane
+  - IgnoreHitLayer
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
   - XR Simulation
   - 
   m_SortingLayers:
