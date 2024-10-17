@@ -1,47 +1,42 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Serialization;
 
-public class TriggerCollider : MonoBehaviour
+namespace Bowling
 {
-    // Start is called before the first frame update
-    public BowlingController bowlingController;
-    public bool triggerTurn = false;
-    private Rigidbody _activeBall;
-    void Start()
+    public class TriggerCollider : MonoBehaviour
     {
-        if (bowlingController == null)
+        // Start is called before the first frame update
+        private BowlingController _bowlingController;
+        public bool triggerTurn = false;
+        private Rigidbody _activeBall;
+        void Start()
         {
-            bowlingController = Component.FindObjectOfType<BowlingController>();
+            _bowlingController = BowlingController.instance;
+            _bowlingController.softResetEvent += (sender, args) =>
+            {
+                _activeBall = null;
+            };
+            _bowlingController.hardResetEvent += (sender, args) =>
+            {
+                _activeBall = null;
+            };
         }
 
-        bowlingController.softResetEvent += (sender, args) =>
+        // Update is called once per frame
+        void Update()
         {
-            _activeBall = null;
-        };
-        bowlingController.hardResetEvent += (sender, args) =>
-        {
-            _activeBall = null;
-        };
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
         
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (_activeBall && other.attachedRigidbody && other.attachedRigidbody != _activeBall)
-        {
-            other.attachedRigidbody.velocity = Vector3.zero;
-            other.attachedRigidbody.angularVelocity = Vector3.zero;
-            return;
         }
-        _activeBall = other.gameObject.GetComponent<Rigidbody>();
-        if (triggerTurn) bowlingController.BallRolled(other.gameObject);
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if (_activeBall && other.attachedRigidbody && other.attachedRigidbody != _activeBall)
+            {
+                other.attachedRigidbody.velocity = Vector3.zero;
+                other.attachedRigidbody.angularVelocity = Vector3.zero;
+                return;
+            }
+            _activeBall = other.gameObject.GetComponent<Rigidbody>();
+            if (triggerTurn) _bowlingController.BallRolled(other.gameObject);
+        }
     }
 }

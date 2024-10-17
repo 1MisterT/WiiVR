@@ -1,15 +1,14 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using Bowling;
+using Basics;
 using UnityEngine;
-using UnityEngine.Serialization;
 
-public class HightLimit : MonoBehaviour
+namespace Bowling
 {
-    private void OnTriggerEnter(Collider other)
+    public class HightLimit : MonoBehaviour
     {
-        other.GetComponent<BasicResettable>()?.Reset();
+        private void OnTriggerEnter(Collider other)
+        {
+            other.GetComponent<BasicResettable>()?.Reset();
         
+        }
     }
 }

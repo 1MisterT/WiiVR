@@ -1,39 +1,36 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using Bowling;
-using Unity.VisualScripting;
+using Basics;
 using UnityEngine;
 
-public class BownlingPin : BasicResettable
+namespace Bowling
 {
-    // Start is called before the first frame update
-    private Boolean _isKnocked = false;
-    public BowlingController bowlingController;
-
-    protected override void Start()
+    public class BownlingPin : BasicResettable
     {
-        base.Start();
-        if (bowlingController == null)
+        // Start is called before the first frame update
+        private Boolean _isKnocked = false;
+        private BowlingController _bowlingController;
+
+        protected override void Start()
         {
-            bowlingController = Component.FindObjectOfType<BowlingController>();
+            base.Start();
+            _bowlingController = BowlingController.instance;
         }
-    }
 
-    // Update is called once per frame
-    void FixedUpdate()
-    {
-        if (_isKnocked) return;
-        if (Rigidbody.transform.up.y < 0.5f )
+        // Update is called once per frame
+        void FixedUpdate()
         {
-            bowlingController.KnockPin(gameObject);
-            _isKnocked = true;
+            if (_isKnocked) return;
+            if (Rigidbody.transform.up.y < 0.5f )
+            {
+                _bowlingController.KnockPin(gameObject);
+                _isKnocked = true;
+            }
         }
-    }
 
-    public override void Reset()
-    {
-        base.Reset();
-        _isKnocked = false;
+        public override void Reset()
+        {
+            base.Reset();
+            _isKnocked = false;
+        }
     }
 }
