@@ -339,7 +339,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 898548931922269034, guid: 4e2538e97eb0df34693d255995dcde15, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6660109610575178565, guid: 4e2538e97eb0df34693d255995dcde15, type: 3}
       propertyPath: m_LocalPosition.x
@@ -833,6 +833,7 @@ GameObject:
   - component: {fileID: 744606543}
   - component: {fileID: 744606541}
   - component: {fileID: 744606544}
+  - component: {fileID: 744606545}
   m_Layer: 0
   m_Name: GolfBall
   m_TagString: GolfBall
@@ -869,8 +870,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33336c2e3f861064b9741f4687946f96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveMaterial: {fileID: 0}
-  stopMaterial: {fileID: 0}
+  moveMaterial: {fileID: 2100000, guid: 9b3dc38741281d546aca6c755a4b9dd7, type: 2}
+  stopMaterial: {fileID: 2100000, guid: 3929f342ee3429b478eca33e36311535, type: 2}
 --- !u!54 &744606543
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -880,7 +881,7 @@ Rigidbody:
   m_GameObject: {fileID: 744606539}
   serializedVersion: 4
   m_Mass: 1
-  m_Drag: 0.3
+  m_Drag: 1
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -897,7 +898,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 1
   m_Constraints: 0
-  m_CollisionDetection: 2
+  m_CollisionDetection: 1
 --- !u!114 &744606544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -911,6 +912,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetLayerName: IgnoreHitLayer
+--- !u!114 &744606545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 744606539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29eaa052abe9ddc4abbbb83c5d51ad65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isAthole: 0
+  isIdle: 0
+  isMoving: 0
+  wasMoving: 0
+  isHitable: 0
+  hitColor: {r: 0, g: 0, b: 0, a: 0}
+  moveColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1001 &1241033378
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1351,7 +1371,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.06
+  m_Radius: 0.055
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1645790883
 PrefabInstance:
@@ -1407,7 +1427,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5016576488908274849, guid: f8f9ead44aa743648a887f69076deb93, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1816,6 +1836,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 339881785093693629, guid: 6a936c8f310d6a8458286e6cf4e37518, type: 3}
+      propertyPath: m_TagString
+      value: GolfClub
+      objectReference: {fileID: 0}
+    - target: {fileID: 2732012296717986247, guid: 6a936c8f310d6a8458286e6cf4e37518, type: 3}
+      propertyPath: m_InteractionLayers.m_Bits
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4730674340856764463, guid: 6a936c8f310d6a8458286e6cf4e37518, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.11
@@ -1860,6 +1888,22 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7503224263161260131, guid: 6a936c8f310d6a8458286e6cf4e37518, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.6427876
+      objectReference: {fileID: 0}
+    - target: {fileID: 7503224263161260131, guid: 6a936c8f310d6a8458286e6cf4e37518, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7660445
+      objectReference: {fileID: 0}
+    - target: {fileID: 7503224263161260131, guid: 6a936c8f310d6a8458286e6cf4e37518, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7503224263161260131, guid: 6a936c8f310d6a8458286e6cf4e37518, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -80
+      objectReference: {fileID: 0}
     - target: {fileID: 8097876827275938237, guid: 6a936c8f310d6a8458286e6cf4e37518, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -1882,7 +1926,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9221072136081747024, guid: 6a936c8f310d6a8458286e6cf4e37518, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: GolfClub
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
