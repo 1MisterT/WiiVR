@@ -6,12 +6,30 @@
   <component name="ChangeListManager">
     <list default="true" id="a215b350-de52-4c3a-9564-8e58655fe270" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WiiVR/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WiiVR/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/golfScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/golfScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3D/Bowling Pin.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3D/Bowling Pin.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3D/BowlingBall.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3D/BowlingBall.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Custom XR Elements/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Custom XR Elements/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MainMixer.mixer" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MainMixer.mixer" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/BirdviewCamera.renderTexture" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/BirdviewCamera.renderTexture" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameBowling.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameBowling.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bowling/BowlingBall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bowling/BowlingBall.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bowling/BowlingController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bowling/BowlingController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bowling/TriggerCollider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bowling/TriggerCollider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TimerScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TimerScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SoundFXManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SoundFXManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SoundFXManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SoundFXManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/User Interface, Alert, Event Tone SND30988 1.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/User Interface, Alert, Event Tone SND30988 1.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/User Interface, Alert, Event Tone SND30988.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/User Interface, Alert, Event Tone SND30988.wav.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DpaMonitoringSettings">
+    <option name="autoShow" value="false" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -35,10 +53,12 @@
 }</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0aecc392d76442ba84ceccd84292cdbb4800/1b/0600470c/XRSettings.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0b78209fd00d4f419f30dd210cbab239176600/8e/e13913ee/SetupCoroutine.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0b78209fd00d4f419f30dd210cbab239176600/db/9b39e469/Component.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8ce0bd04a7a04b4b9395538239d3fdd846ac00/40/bde52b9b/NullReferenceException.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/HoleVortexScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/Utilities/DelegateHelpers.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@2.6.3/Runtime/Interaction/Interactables/XRGrabInteractable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.management@4.4.0/Runtime/XRGeneralSettings.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.management@4.4.0/Runtime/XRManagerSettings.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.openxr@1.12.1/Runtime/Features/OpenXRFeature.cs" root0="SKIP_HIGHLIGHTING" />
@@ -57,19 +77,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "XThreadsFramesViewSplitterKey": "0.49422634",
-    "git-widget-placeholder": "dev/main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Attach to Unity Editor.Attach to Unity Editor.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.6666667&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev/bowling&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.46f1\Editor\Unity.exe" />
@@ -151,7 +171,23 @@
       <option name="project" value="LOCAL" />
       <updated>1729156947645</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="CHANGE: renamed golf scene and fixed to work with vr headset">
+      <option name="closed" value="true" />
+      <created>1729174171794</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1729174171794</updated>
+    </task>
+    <task id="LOCAL-00006" summary="CHANGE: renamed golf scene and fixed to work with vr headset">
+      <option name="closed" value="true" />
+      <created>1729174275812</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1729174275812</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,7 +208,8 @@
     <MESSAGE value="Merge branch 'dev/velocity' into dev/main&#10;&#10;# Conflicts:&#10;#&#9;Assets/Samples/XR Interaction Toolkit/2.6.3/Starter Assets/DemoScene.unity.meta&#10;#&#9;ProjectSettings/EditorBuildSettings.asset&#10;#&#9;ProjectSettings/ProjectSettings.asset&#10;#&#9;ProjectSettings/QualitySettings.asset&#10;#&#9;ProjectSettings/TagManager.asset" />
     <MESSAGE value="MERGE: golf and bowling" />
     <MESSAGE value="MERGE: merged dev main to main" />
-    <option name="LAST_COMMIT_MESSAGE" value="MERGE: merged dev main to main" />
+    <MESSAGE value="CHANGE: renamed golf scene and fixed to work with vr headset" />
+    <option name="LAST_COMMIT_MESSAGE" value="CHANGE: renamed golf scene and fixed to work with vr headset" />
     <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
   </component>
 </project>

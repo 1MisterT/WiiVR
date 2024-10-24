@@ -17,11 +17,13 @@ public class SoundFXManager : MonoBehaviour
 
     public void PlaySoundFX(AudioClip audioClip, Transform spawnTransform, float volume = 1f)
     {
+        if (audioClip is null) return;
         //spawn gameObject
         AudioSource audioSource = Instantiate(_soundFXObject, spawnTransform.position, Quaternion.identity);
         
         //assign audioClip and play
         audioSource.clip = audioClip;
+        audioSource.volume = volume;
         audioSource.Play();
         
         float clipLenght = audioClip.length;
