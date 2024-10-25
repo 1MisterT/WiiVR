@@ -1839,11 +1839,17 @@ MonoBehaviour:
   softResetAction: {fileID: 871027354310968739, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   pinGroup: {fileID: 689916131}
   ballGroup: {fileID: 396498717}
-  knockPinSound: {fileID: 8300000, guid: d1f46b4e66c7c984a8fc070964673e1f, type: 3}
+  knockPinSounds:
+  - {fileID: 8300000, guid: 364a4b5df633a3f78a0888e2b704fd53, type: 3}
+  - {fileID: 8300000, guid: f1d68354c9f873be29bd4d18bcf87ce4, type: 3}
+  - {fileID: 8300000, guid: 9934118c86e7d0f909a2628b8c35deac, type: 3}
+  - {fileID: 8300000, guid: 78cc2a885cd18ac7aa8c155fb56b2855, type: 3}
+  - {fileID: 8300000, guid: 89e8adbc314e0a7f5927bcc89fd3bbcc, type: 3}
+  - {fileID: 8300000, guid: 8b4ca03d6b22a732695a4f4f4ca15b1e, type: 3}
   looseSound: {fileID: 8300000, guid: d7792b0d86f77f148a638b15e5fae48e, type: 3}
   spareSound: {fileID: 8300000, guid: 9c5e6c0dc09566d429a65e20e9d6a5d7, type: 3}
   strikeSound: {fileID: 8300000, guid: b41bc73bbb2ff764bbeebd482a5dce74, type: 3}
-  turnsPerFrame: 0
+  turnsPerFrame: 2
 --- !u!4 &913544199
 Transform:
   m_ObjectHideFlags: 0
@@ -3517,9 +3523,13 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1038912529}
+    - target: {fileID: 1378487774472627986, guid: d93fd673dade9744d8eba919086e4056, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1626461504569369418, guid: d93fd673dade9744d8eba919086e4056, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -1.33
       objectReference: {fileID: 0}
     - target: {fileID: 1626461504569369418, guid: d93fd673dade9744d8eba919086e4056, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3527,7 +3537,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1626461504569369418, guid: d93fd673dade9744d8eba919086e4056, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -1.66
       objectReference: {fileID: 0}
     - target: {fileID: 1626461504569369418, guid: d93fd673dade9744d8eba919086e4056, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3555,6 +3565,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1626461504569369418, guid: d93fd673dade9744d8eba919086e4056, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5582148970507675682, guid: d93fd673dade9744d8eba919086e4056, type: 3}
+      propertyPath: startSpeed.x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5582148970507675682, guid: d93fd673dade9744d8eba919086e4056, type: 3}
+      propertyPath: startSpeed.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5827446868364883336, guid: d93fd673dade9744d8eba919086e4056, type: 3}

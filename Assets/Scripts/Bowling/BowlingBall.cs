@@ -13,15 +13,17 @@ namespace Bowling
         [SerializeField] private Canvas massDisplay;
         
         private XRGrabInteractable _grabInteractable;
+        private AudioSource _audioSource;
 
         private TextMeshProUGUI _massScale;
         // Start is called before the first frame update
         protected override void Start()
         {
             base.Start();
-            //Rigidbody.velocity = startSpeed;
+            Rigidbody.velocity = startSpeed;
             _grabInteractable = GetComponent<XRGrabInteractable>();
             _massScale = massDisplay.GetComponentInChildren<TextMeshProUGUI>();
+            _audioSource = GetComponent<AudioSource>();
         }
 
         // Update is called once per frame
@@ -35,9 +37,17 @@ namespace Bowling
             {
                 massDisplay.gameObject.SetActive(true);
             }
-            if (Mathf.Approximately(ballMass, Rigidbody.mass)) return;
+            _audioSource.volume = Mathf.Clamp(Rigidbody.velocity.magnitude, 0, 1);
+            if (!Mathf.Approximately(ballMass, Rigidbody.mass))
+                ChangeBallMass();
+        }
+
+        private void ChangeBallMass()
+        {
             if (Rigidbody is not null)
+            {
                 Rigidbody.mass = ballMass;
+            }
             _massScale.text = Rigidbody?.mass.ToString("0.0");
         }
 

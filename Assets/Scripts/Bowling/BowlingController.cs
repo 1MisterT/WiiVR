@@ -32,7 +32,7 @@ namespace Bowling
         [SerializeField] private InputActionReference softResetAction;
         [SerializeField] private GameObject pinGroup;
         [SerializeField] private GameObject ballGroup;
-        [SerializeField] private AudioClip knockPinSound;
+        [SerializeField] private AudioClip[] knockPinSounds;
         [SerializeField] private AudioClip looseSound;
         [SerializeField] private AudioClip spareSound;
         [SerializeField] private AudioClip strikeSound;
@@ -58,7 +58,7 @@ namespace Bowling
         {
             StartCoroutine(GetSpecialPinPosition(_totalKnockedPins.Count, _newKnockedPins.Count));
             //Strike condition
-            if (_newKnockedPins.Count == 10 || _turn == 0)
+            if (_newKnockedPins.Count == 10 || _turn <= 1)
             {
                 HardReset();
                 return;
@@ -74,7 +74,7 @@ namespace Bowling
         {
             _newKnockedPins?.Add(knockedPin);
             _timer.ResetTimer();
-            _soundFX.PlaySoundFX(knockPinSound, knockedPin.gameObject.transform, 0.5f);
+            _soundFX.PlayRandomSoundFX(knockPinSounds, knockedPin.gameObject.transform, 0.5f);
             
         }
     
