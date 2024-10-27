@@ -8,7 +8,8 @@ namespace Golf
     {
         // public property will be set by other scripts and handles the logic of disabling the collision collider when the ball is in the hole
         private bool _isInHole;
-        public bool isInhole {get => _isInHole; set { _isInHole = value; if (_isInHole) { DisableCollider(_collisionCollider); } } }
+        public bool isInhole {get => _isInHole; set { _isInHole = value; }
+        }
 
         private bool _hitRegisteredThisFrame;
         public bool hitRegisteredThisFrame {get => _hitRegisteredThisFrame; set => _hitRegisteredThisFrame = value; }
@@ -27,11 +28,11 @@ namespace Golf
         private Collider _collisionCollider;
         private Coroutine _movementCheckCoroutine;
 
-        public Color hitColor;
-        public Color moveColor;
-
         private float _hitCooldown = 0.1f; // 0.1-second cooldown before ball can be hit again
         private float _lastHitTime;
+
+        private int _hitCount;
+        public int hitCount { get => _hitCount; set { _hitCount = value; } }
 
         private void Start()
         {
@@ -46,24 +47,26 @@ namespace Golf
                 _colliderList = GetComponentsInChildren<Collider>();
                 FindCollisionCollider(_colliderList);
             }
+            
+            _hitCount = 0;
 
         }
         
-        private bool canHit => !isMoving && Time.time - _lastHitTime > _hitCooldown;
+        public bool canHit => !isMoving && Time.time - _lastHitTime > _hitCooldown;
         private void FixedUpdate()
         {
             // Reset the flag at the beginning of each frame
             _hitRegisteredThisFrame = false;
             
             // Ball can be hit only if it's not moving and cooldown has passed
-            isHitable = canHit;
+            isHitable = !isMoving && canHit;
         }
 
         // checking movement at fixed intervals instead of every single frame
         // event driven updates
         // preventing overlap and false hits
-        // This kinda fixes the issue of the ball-hit-registration being very inconsisent and makes the hit detection more reliable (still not 100% registration)
-        // need to be careful with this because it does not 
+        // This kinda fixes the issue of the ball-hit-registration being very inconsisent and makes the hit detection more reliable (still not 100% accurate registration)
+        // need to be careful with this
         private IEnumerator CheckMovementCoroutine()
         {
             // in this context it is okay to use while (true) because we are using a Coroutine in Unity in combination with yield statements
@@ -80,18 +83,17 @@ namespace Golf
         private void TrackMovement()
         {
             // Check if the ball is moving based on its velocity magnitude
-            bool isCurrentlyMoving = _rigidbody.velocity.magnitude >= 0.1f;
+            isMoving = _rigidbody.velocity.magnitude >= 0.02f;
 
             // Check if the movement state has changed
-            if (isCurrentlyMoving != wasMoving)
+            if (isMoving != wasMoving)
             {
-                isMoving = isCurrentlyMoving;
-                isIdle = !isCurrentlyMoving;
-                Debug.Log($@"{name} {(isCurrentlyMoving ? "is moving" : "stopped moving")}");
+                isIdle = !isMoving;
+                Debug.Log($@"{name} {(isMoving ? "is moving" : "stopped moving")}");
             }
 
             // Update the previous state for the next frame
-            wasMoving = isCurrentlyMoving;
+            wasMoving = isMoving;
         }
         
         private void StopTrackMovement()
@@ -103,9 +105,9 @@ namespace Golf
             }
         }
         
-        private void FindCollisionCollider(Collider[] collider)
+        private void FindCollisionCollider(Collider[] colliderList)
         {
-            foreach (Collider col in collider)
+            foreach (Collider col in colliderList)
             {
                 if (!col.isTrigger)
                 {
@@ -118,6 +120,11 @@ namespace Golf
         private void DisableCollider(Collider collider)
         {
             collider.enabled = false;
+        }
+
+        private void EnableCollider(Collider collider)
+        {
+            collider.enabled = true;
         }
 
         private void OnDestroy()

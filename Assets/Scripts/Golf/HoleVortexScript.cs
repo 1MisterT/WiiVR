@@ -21,7 +21,7 @@ namespace Golf
         void OnTriggerEnter(Collider other)
         {
             Vector3 currentVelocity = _golfrb.velocity;
-            if (other.gameObject.tag == "GolfBall" && currentVelocity != Vector3.zero)
+            if (other.gameObject.tag == "GolfBallRoot" && currentVelocity != Vector3.zero)
             {
                 Debug.Log("Golfball entered VortexTrigger");
                 Vector3 directionToTargetCenter = (_golfhole.transform.position - other.transform.position).normalized;

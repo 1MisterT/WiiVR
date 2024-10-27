@@ -1,22 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Golf
 {
     public class RegisterBallHit : MonoBehaviour
     {
-        private float _hitCooldown = 0.1f; // 0.1 seconds cooldown
+        private float _hitCooldown = 1f; // 1 second cooldown
         private float _lastHitTime;
-        public int hitCounter{ get; private set; }
+        
+        private Ball _ball;
 
-    private Ball _ball;
-
-
+        private void Start()
+        {
+            _ball = gameObject.GetComponent<Ball>();
+        }
+        
         // Method that sets cooldown after the ball was hit
         private bool CanRegisterHit()
         {
-            _ball = GameObject.FindGameObjectWithTag("GolfBall").GetComponent<Ball>();
             _ball.isHitable = true;
             return Time.time - _lastHitTime > _hitCooldown;
         }
@@ -27,12 +27,12 @@ namespace Golf
         {
             if (CanRegisterHit() && _ball.isHitable && !_ball.hitRegisteredThisFrame)
             {
-                _ball.isHitable = false;
+               // _ball.isHitable = false;
                 _ball.hitRegisteredThisFrame = true;
                 _lastHitTime = Time.time; // start cooldown
-                hitCounter++; // Increment hit counter
+                _ball.hitCount++; // Increment hit counter
                 Debug.Log("Golf ball hit!");
-                Debug.Log("Current amount of hits: " + hitCounter);
+                Debug.Log("Current amount of hits: " + _ball.hitCount);
             }
         }
     }

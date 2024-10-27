@@ -84,12 +84,12 @@ namespace Golf
             _grabInteract.selectExited.RemoveListener(OnRelease);
         }
 
-        void DisableKinematic()
+        public void DisableKinematic()
         {
             _rb.isKinematic = false;
         }
 
-        void EnableKinematic()
+        public void EnableKinematic()
         {
             _rb.isKinematic = true;
         }
