@@ -1,22 +1,64 @@
 using Basics;
+using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
+using UnityEngine.XR.Interaction.Toolkit;
 
 namespace Bowling
 {
     public class BowlingBall : BasicResettable
-    {
-        public Vector3 startSpeed;
+    { 
+        [SerializeField] private Vector3 startSpeed;
+        [SerializeField] private float ballMass;
+        [SerializeField] private Canvas massDisplay;
+        
+        private XRGrabInteractable _grabInteractable;
+        private AudioSource _audioSource;
+
+        private TextMeshProUGUI _massScale;
         // Start is called before the first frame update
         protected override void Start()
         {
             base.Start();
             Rigidbody.velocity = startSpeed;
+            _grabInteractable = GetComponent<XRGrabInteractable>();
+            _massScale = massDisplay.GetComponentInChildren<TextMeshProUGUI>();
+            _audioSource = GetComponent<AudioSource>();
         }
 
         // Update is called once per frame
-        void Update()
+        private void FixedUpdate()
         {
-        
+            if (_grabInteractable.firstInteractorSelecting == null)
+            {
+                massDisplay.gameObject.SetActive(false);
+            }
+            else
+            {
+                massDisplay.gameObject.SetActive(true);
+            }
+            _audioSource.volume = Mathf.Clamp(Rigidbody.velocity.magnitude, 0, 1);
+            if (!Mathf.Approximately(ballMass, Rigidbody.mass))
+                ChangeBallMass();
+        }
+
+        private void ChangeBallMass()
+        {
+            if (Rigidbody is not null)
+            {
+                Rigidbody.mass = ballMass;
+            }
+            _massScale.text = Rigidbody?.mass.ToString("0.0");
+        }
+
+        public void IncreaseMass(float amount)
+        {
+            ballMass += amount;
+        }
+
+        public void DecreaseMass(float amount)
+        {
+            ballMass -= amount;
         }
     }
 }
