@@ -4,175 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a215b350-de52-4c3a-9564-8e58655fe270" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WiiVR/.idea/shelf/Changes/Cursor.png" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WiiVR/.idea/shelf/Changes/Cursor.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WiiVR/.idea/shelf/Changes/EmojiOne.png" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WiiVR/.idea/shelf/Changes/EmojiOne.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WiiVR/.idea/shelf/Changes/Gripper.png" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WiiVR/.idea/shelf/Changes/Gripper.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WiiVR/.idea/shelf/Changes/HMD.png" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WiiVR/.idea/shelf/Changes/HMD.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WiiVR/.idea/shelf/Changes/HMDOverlay.png" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WiiVR/.idea/shelf/Changes/HMDOverlay.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WiiVR/.idea/shelf/Changes/HMD_d.png" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WiiVR/.idea/shelf/Changes/HMD_d.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WiiVR/.idea/shelf/Changes/Hand_Default.png" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WiiVR/.idea/shelf/Changes/Hand_Default.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WiiVR/.idea/shelf/Changes/Hand_Fist.png" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WiiVR/.idea/shelf/Changes/Hand_Fist.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WiiVR/.idea/shelf/Changes/Hand_Grab.png" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WiiVR/.idea/shelf/Changes/Hand_Grab.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WiiVR/.idea/shelf/Changes/Hand_Open.png" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WiiVR/.idea/shelf/Changes/Hand_Open.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WiiVR/.idea/shelf/Changes/Hand_Pinch.png" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WiiVR/.idea/shelf/Changes/Hand_Pinch.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WiiVR/.idea/shelf/Changes/Hand_Poke.png" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WiiVR/.idea/shelf/Changes/Hand_Poke.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WiiVR/.idea/shelf/Changes/Hand_Thumb.png" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WiiVR/.idea/shelf/Changes/Hand_Thumb.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WiiVR/.idea/shelf/Changes/KeyboardIcon.png" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WiiVR/.idea/shelf/Changes/KeyboardIcon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WiiVR/.idea/shelf/Changes/LiberationSans.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WiiVR/.idea/shelf/Changes/LiberationSans.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WiiVR/.idea/shelf/Changes/Locked.png" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WiiVR/.idea/shelf/Changes/Locked.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WiiVR/.idea/shelf/Changes/Look.png" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WiiVR/.idea/shelf/Changes/Look.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WiiVR/.idea/shelf/Changes/Mouse.png" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WiiVR/.idea/shelf/Changes/Mouse.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WiiVR/.idea/shelf/Changes/MouseMoveAround.png" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WiiVR/.idea/shelf/Changes/MouseMoveAround.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WiiVR/.idea/shelf/Changes/MouseR.png" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WiiVR/.idea/shelf/Changes/MouseR.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WiiVR/.idea/shelf/Changes/MouseR_d.png" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WiiVR/.idea/shelf/Changes/MouseR_d.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WiiVR/.idea/shelf/Changes/MoveRotateTool.png" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WiiVR/.idea/shelf/Changes/MoveRotateTool.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WiiVR/.idea/shelf/Changes/Movement.png" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WiiVR/.idea/shelf/Changes/Movement.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WiiVR/.idea/shelf/Changes/OpenWindow.png" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WiiVR/.idea/shelf/Changes/OpenWindow.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WiiVR/.idea/shelf/Changes/Unlocked.png" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WiiVR/.idea/shelf/Changes/Unlocked.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WiiVR/.idea/shelf/Changes/XR.png" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WiiVR/.idea/shelf/Changes/XR.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WiiVR/.idea/shelf/Changes/btn_bgbottom.png" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WiiVR/.idea/shelf/Changes/btn_bgbottom.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WiiVR/.idea/shelf/Changes/hand.png" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WiiVR/.idea/shelf/Changes/hand.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WiiVR/.idea/shelf/Changes/xr_hmd.png" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WiiVR/.idea/shelf/Changes/xr_hmd.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WiiVR/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WiiVR/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3D/BowlingBall.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3D/BowlingBall.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Baseball.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Baseball.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Baseball.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Baseball.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Basketball.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Basketball.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Basketball.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Basketball.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Football.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Football.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Football.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Football.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Golf.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Golf.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Golf.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Golf.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Materials/Baseball.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Materials/Baseball.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Materials/Baseball_A.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Materials/Baseball_A.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Materials/Baseball_MAOS.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Materials/Baseball_MAOS.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Materials/Baseball_N.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Materials/Baseball_N.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Materials/Basketball.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Materials/Basketball.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Materials/Basketball_A.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Materials/Basketball_A.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Materials/Basketball_MAOS.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Materials/Basketball_MAOS.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Materials/Basketball_N.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Materials/Basketball_N.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Materials/Football.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Materials/Football.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Materials/Football_A.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Materials/Football_A.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Materials/Football_MAOS.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Materials/Football_MAOS.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Materials/Football_N.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Materials/Football_N.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Materials/Golf.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Materials/Golf.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Materials/Golf_A.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Materials/Golf_A.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Materials/Golf_MAOS.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Materials/Golf_MAOS.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Materials/Golf_N.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Materials/Golf_N.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Materials/Soccer.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Materials/Soccer.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Materials/Soccer_A.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Materials/Soccer_A.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Materials/Soccer_MAOS.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Materials/Soccer_MAOS.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Materials/Soccer_N.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Materials/Soccer_N.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Materials/Tennis.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Materials/Tennis.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Materials/Tennis_A.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Materials/Tennis_A.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Materials/Tennis_MAOS.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Materials/Tennis_MAOS.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Materials/Tennis_N.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Materials/Tennis_N.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Materials/Volleyball.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Materials/Volleyball.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Materials/Volleyball_A.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Materials/Volleyball_A.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Materials/Volleyball_MAOS.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Materials/Volleyball_MAOS.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Materials/Volleyball_N.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Materials/Volleyball_N.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Soccer.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Soccer.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Soccer.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Soccer.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Tennis.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Tennis.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Tennis.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Tennis.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Volleyball.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Volleyball.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Volleyball.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Models/Sport_Balls/Volleyball.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Scenes.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Scenes/Demo.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Scenes/Demo.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Scenes/Demo.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Scenes/Demo/Lighting Settings.lighting" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Scenes/Demo/Lighting Settings.lighting.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Scenes/Demo/LightingData.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Scenes/Demo/LightingData.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Scenes/Demo/Lightmap-0_comp_light.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Scenes/Demo/Lightmap-0_comp_light.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Scenes/Demo/Lightmap-0_comp_shadowmask.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Scenes/Demo/Lightmap-0_comp_shadowmask.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Scenes/Demo/Post Processing.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Scenes/Demo/Post Processing.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Scenes/Demo/ReflectionProbe-0.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Scenes/Demo/ReflectionProbe-0.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Scenes/Demo/ReflectionProbe-1.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Scenes/Demo/ReflectionProbe-1.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Skybox.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Skybox/Skybox.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Saritasa/Skybox/Skybox.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameBowling.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameBowling.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bowling/BowlingBall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bowling/BowlingBall.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bowling/BowlingController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bowling/BowlingController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sounds/PinKnock.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sounds/PinKnock.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Toys, Misc, Marble, Roll Across Wooden Table, Drop On Floor SND33438.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Toys, Misc, Marble, Roll Across Wooden Table, Drop On Floor SND33438.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sounds/soundLoose.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sounds/soundLoose.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sounds/spareSound.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sounds/spareSound.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sounds/strikeSound.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sounds/strikeSound.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sounds/wii_sports_background_v1.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sounds/wii_sports_background_v1.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/LiberationSans.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/LiberationSans.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Sprites/EmojiOne.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Sprites/EmojiOne.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Used Golf Club/Assets/Meshes/Golf Club Model.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Used Golf Club/Assets/Meshes/Golf Club Model.fbx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Used Golf Club/Assets/Textures/Golf Club AO.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Used Golf Club/Assets/Textures/Golf Club AO.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Used Golf Club/Assets/Textures/Golf Club Diff.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Used Golf Club/Assets/Textures/Golf Club Diff.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Used Golf Club/Assets/Textures/Golf Club Metalness.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Used Golf Club/Assets/Textures/Golf Club Metalness.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Used Golf Club/Assets/Textures/Golf Club Normal.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Used Golf Club/Assets/Textures/Golf Club Normal.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tube.blend" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tube.blend" afterDir="false" />
-    </list>
+    <list default="true" id="a215b350-de52-4c3a-9564-8e58655fe270" name="Changes" comment="COMMIT: added 3D BA Map" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
   </component>
   <component name="DpaMonitoringSettings">
     <option name="autoShow" value="false" />
@@ -191,12 +32,12 @@
     &quot;assignee&quot;: &quot;1MisterT&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/1MisterT/WiiVR.git&quot;,
-    &quot;accountId&quot;: &quot;7931449a-7082-47eb-8ec9-e289985556ed&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/1MisterT/WiiVR.git",
+    "accountId": "0e81eaf9-6dad-4f16-b2a7-241e4b9bc4f2"
   }
-}</component>
+}]]></component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0aecc392d76442ba84ceccd84292cdbb4800/1b/0600470c/XRSettings.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0b78209fd00d4f419f30dd210cbab239176600/8e/e13913ee/SetupCoroutine.cs" root0="FORCE_HIGHLIGHTING" />
@@ -238,7 +79,7 @@
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.46f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="$USER_HOME$/Unity/Hub/Editor/2022.3.46f1/Editor/Unity" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath C:\Users\tom\RiderProjects\WiiVR -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Users\tom\RiderProjects\WiiVR" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -246,7 +87,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.46f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="$USER_HOME$/Unity/Hub/Editor/2022.3.46f1/Editor/Unity" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath C:\Users\tom\RiderProjects\WiiVR -testResults Logs/results.xml -logFile Logs/Editor.log -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Users\tom\RiderProjects\WiiVR" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -300,6 +141,7 @@
       <updated>1729156860255</updated>
       <workItem from="1729156862180" duration="202000" />
       <workItem from="1729171191774" duration="2133000" />
+      <workItem from="1730050622778" duration="1260000" />
     </task>
     <task id="LOCAL-00003" summary="MERGE: golf and bowling">
       <option name="closed" value="true" />
@@ -333,7 +175,23 @@
       <option name="project" value="LOCAL" />
       <updated>1729174275812</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="CHANGE: added new sounds, pin knock + ball roll">
+      <option name="closed" value="true" />
+      <created>1729860716889</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1729860716889</updated>
+    </task>
+    <task id="LOCAL-00008" summary="COMMIT: added 3D BA Map">
+      <option name="closed" value="true" />
+      <created>1730102359329</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1730102359329</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -355,7 +213,9 @@
     <MESSAGE value="MERGE: golf and bowling" />
     <MESSAGE value="MERGE: merged dev main to main" />
     <MESSAGE value="CHANGE: renamed golf scene and fixed to work with vr headset" />
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="CHANGE: added new sounds, pin knock + ball roll" />
+    <MESSAGE value="COMMIT: added 3D BA Map" />
+    <option name="LAST_COMMIT_MESSAGE" value="COMMIT: added 3D BA Map" />
     <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
   </component>
 </project>

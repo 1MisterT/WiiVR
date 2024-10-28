@@ -1249,71 +1249,6 @@ MonoBehaviour:
   m_OnDeactivate:
     m_PersistentCalls:
       m_Calls: []
---- !u!1001 &754501552
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2977891506945876109, guid: d48ca7cad02affa46919123b16743d9a, type: 3}
-      propertyPath: m_InteractionManager
-      value: 
-      objectReference: {fileID: 1917719988}
-    - target: {fileID: 2977891506945876109, guid: d48ca7cad02affa46919123b16743d9a, type: 3}
-      propertyPath: m_MatchDirectionalInput
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4014950297189070572, guid: d48ca7cad02affa46919123b16743d9a, type: 3}
-      propertyPath: m_Name
-      value: Teleportation Anchor Island
-      objectReference: {fileID: 0}
-    - target: {fileID: 4801735930040575966, guid: d48ca7cad02affa46919123b16743d9a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -4.868363
-      objectReference: {fileID: 0}
-    - target: {fileID: 4801735930040575966, guid: d48ca7cad02affa46919123b16743d9a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.00000023841858
-      objectReference: {fileID: 0}
-    - target: {fileID: 4801735930040575966, guid: d48ca7cad02affa46919123b16743d9a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 6.6112547
-      objectReference: {fileID: 0}
-    - target: {fileID: 4801735930040575966, guid: d48ca7cad02affa46919123b16743d9a, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4801735930040575966, guid: d48ca7cad02affa46919123b16743d9a, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4801735930040575966, guid: d48ca7cad02affa46919123b16743d9a, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4801735930040575966, guid: d48ca7cad02affa46919123b16743d9a, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4801735930040575966, guid: d48ca7cad02affa46919123b16743d9a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4801735930040575966, guid: d48ca7cad02affa46919123b16743d9a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4801735930040575966, guid: d48ca7cad02affa46919123b16743d9a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: d48ca7cad02affa46919123b16743d9a, type: 3}
 --- !u!1 &896883128
 GameObject:
   m_ObjectHideFlags: 0
@@ -1862,7 +1797,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1371426079
 Transform:
   m_ObjectHideFlags: 0
@@ -2204,71 +2139,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 1.659}
   m_SizeDelta: {x: 3, y: 2}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1001 &2075525791
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2977891506945876109, guid: d48ca7cad02affa46919123b16743d9a, type: 3}
-      propertyPath: m_InteractionManager
-      value: 
-      objectReference: {fileID: 1917719988}
-    - target: {fileID: 2977891506945876109, guid: d48ca7cad02affa46919123b16743d9a, type: 3}
-      propertyPath: m_MatchDirectionalInput
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4014950297189070572, guid: d48ca7cad02affa46919123b16743d9a, type: 3}
-      propertyPath: m_Name
-      value: Teleportation Anchor Island (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4801735930040575966, guid: d48ca7cad02affa46919123b16743d9a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 6.66
-      objectReference: {fileID: 0}
-    - target: {fileID: 4801735930040575966, guid: d48ca7cad02affa46919123b16743d9a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.00000023841858
-      objectReference: {fileID: 0}
-    - target: {fileID: 4801735930040575966, guid: d48ca7cad02affa46919123b16743d9a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -5.54
-      objectReference: {fileID: 0}
-    - target: {fileID: 4801735930040575966, guid: d48ca7cad02affa46919123b16743d9a, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4801735930040575966, guid: d48ca7cad02affa46919123b16743d9a, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4801735930040575966, guid: d48ca7cad02affa46919123b16743d9a, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4801735930040575966, guid: d48ca7cad02affa46919123b16743d9a, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4801735930040575966, guid: d48ca7cad02affa46919123b16743d9a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4801735930040575966, guid: d48ca7cad02affa46919123b16743d9a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4801735930040575966, guid: d48ca7cad02affa46919123b16743d9a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: d48ca7cad02affa46919123b16743d9a, type: 3}
 --- !u!1 &2097368065
 GameObject:
   m_ObjectHideFlags: 0
@@ -2566,6 +2436,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XRDeviceSimulator
       objectReference: {fileID: 0}
+    - target: {fileID: 4543064634744549717, guid: f9af49e4e552187acaa3ba88e5af1f46, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5180820379835092293, guid: f9af49e4e552187acaa3ba88e5af1f46, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2623,6 +2497,4 @@ SceneRoots:
   - {fileID: 1190351843}
   - {fileID: 2070621526}
   - {fileID: 13113869}
-  - {fileID: 754501552}
-  - {fileID: 2075525791}
   - {fileID: 7785000098595895566}

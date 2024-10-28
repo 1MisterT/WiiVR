@@ -58,7 +58,7 @@ namespace Bowling
         {
             StartCoroutine(GetSpecialPinPosition(_totalKnockedPins.Count, _newKnockedPins.Count));
             //Strike condition
-            if (_newKnockedPins.Count == 10 || _turn <= 1)
+            if (_newKnockedPins.Count == 10 || _turn <= 0)
             {
                 HardReset();
                 return;
