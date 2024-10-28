@@ -1777,8 +1777,8 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 744606539}
   serializedVersion: 4
-  m_Mass: 0.8
-  m_Drag: 0.8
+  m_Mass: 0.7
+  m_Drag: 0.6
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -2746,7 +2746,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5016576488908274849, guid: f8f9ead44aa743648a887f69076deb93, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
