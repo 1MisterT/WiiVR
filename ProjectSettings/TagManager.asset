@@ -7,9 +7,11 @@ TagManager:
   - GolfBall
   - GolfHole
   - Plane
-  - GolfClubChild
-  - GolfClubParent
   - GolfClub
+  - GolfClubPart
+  - GolfClubRoot
+  - GolfBallRoot
+  - GolfBallPart
   layers:
   - Default
   - TransparentFX
@@ -22,7 +24,7 @@ TagManager:
   - Golf
   - PassThroughPlane
   - IgnoreHitLayer
-  - 
+  - Respawn
   - 
   - 
   - 

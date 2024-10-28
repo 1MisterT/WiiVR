@@ -30,7 +30,7 @@ public class ChangeLayerName : MonoBehaviour
     }
     
     // when we call this method with a different script it is not needed to pass a targeted layer name because it must be given in the inspector
-    public void SetLayerRecursively(GameObject obj)
+    public void SetLayerRecursively(GameObject obj) // Idea: maybe just pass the targetLayerName as a variable to adjust demanded layer name for different objects
     {
         if (obj == null)
             return;

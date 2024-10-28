@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8950610775167790066}
   m_Layer: 0
   m_Name: handleCube
-  m_TagString: Untagged
+  m_TagString: GolfClub
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -116,7 +116,7 @@ GameObject:
   - component: {fileID: 6019224243663019270}
   m_Layer: 0
   m_Name: Attach Point
-  m_TagString: Untagged
+  m_TagString: GolfClub
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -150,7 +150,7 @@ GameObject:
   - component: {fileID: 7679883259633733431}
   m_Layer: 0
   m_Name: stickCube
-  m_TagString: Untagged
+  m_TagString: GolfClub
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -254,7 +254,7 @@ GameObject:
   - component: {fileID: 1606971660035313991}
   m_Layer: 0
   m_Name: GolfClub
-  m_TagString: Untagged
+  m_TagString: GolfClub
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -505,7 +505,7 @@ GameObject:
   - component: {fileID: 2829333708481095111}
   m_Layer: 0
   m_Name: Center of MASS
-  m_TagString: Untagged
+  m_TagString: GolfClub
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -539,7 +539,7 @@ GameObject:
   - component: {fileID: 563786715641702055}
   m_Layer: 8
   m_Name: hitCube
-  m_TagString: Untagged
+  m_TagString: GolfClub
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

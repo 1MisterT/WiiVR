@@ -1,79 +1,101 @@
-using Unity.Collections;
 using Unity.XR.CoreUtils;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
-public class GolfBallInteraction : MonoBehaviour
-{
-    private GameObject _golfBall;
-    private GameObject _golfBallMesh;
-    private Renderer _golfBallRenderer;
-    public Material moveMaterial; // reference wanted material for the golf ball in the inspector
-    public Material stopMaterial;
-    private ChangeLayerName _changeLayerName;
-    private Rigidbody _golfBallCollider;
-    private int _counter;
-    private string _currentLayerName;
-    private string _targetLayerName; 
-    void Start()
-    {
-        _golfBall = GameObject.FindWithTag("GolfBall");
-        _golfBallMesh = _golfBall.GetNamedChild("GolfBallMesh");
-        _golfBallCollider = _golfBall.GetComponent<Rigidbody>();
-        _golfBallRenderer = _golfBallMesh.GetComponent<Renderer>();
-        _changeLayerName = gameObject.GetComponent<ChangeLayerName>();
-        
-        if (_changeLayerName != null)
-        {
-            _targetLayerName = _changeLayerName.targetLayerName;
-            _currentLayerName = LayerMask.LayerToName(gameObject.layer);
-        }
-        else
-        {
-            Debug.LogError("Could not find an Gameobject with the GrabInteractableSetup-component");
-        }
-        
-    }
 
-    void Update()
+// script assigned to ball and handles interaction with its surroundings
+// the GolfBall game object and its Ball component are absolutely necessary
+namespace Golf
+{ 
+    public class GolfBallInteraction : MonoBehaviour
     {
-        // check if golf ball is moving
-       if (_golfBallCollider.velocity.magnitude < 0.05f)
-       {
-           OnStopMoving();
-       }
-       else
-       {
-           OnMoving();
-       }
-    }
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("GolfHole"))
+        private GameObject _golfBallRoot;
+        private GameObject _golfBallMesh;
+        private Renderer _golfBallRenderer;
+     
+
+        public Material moveMaterial; // reference wanted material for the golf ball in the inspector
+        public Material stopMaterial;
+
+        private ChangeLayerName _changeLayerName;
+        private Ball _ball;
+        private Rigidbody _golfBallRigidbody;
+        private RegisterBallHit _registerHit;
+
+        private int _counter;
+
+        void Start()
         {
-            _golfBallCollider.detectCollisions = false;
-            Debug.Log("GolfBall reached the hole. Needed hits: " + _counter);
+            _golfBallRoot = GameObject.FindWithTag("GolfBallRoot");
+            _golfBallMesh = _golfBallRoot.GetNamedChild("GolfBallMesh");
+            
+            _golfBallRigidbody = _golfBallRoot.GetComponent<Rigidbody>();
+            _golfBallRenderer = _golfBallMesh.GetComponent<Renderer>();
+            _changeLayerName = _golfBallRoot.GetComponent<ChangeLayerName>();
+            _ball = _golfBallRoot.GetComponent<Ball>();
+            
+            _registerHit = gameObject.GetComponent<RegisterBallHit>();
         }
-        
-        if (other.CompareTag("GolfClub")) // ToDo: need to make a check which automatically takes the game object and its child objects and read their tags
-        { 
-            _counter++;
-            Debug.Log("GolfBall hit!");
-            Debug.Log("Current hits: " + _counter);    
+
+        void FixedUpdate()
+        {
+          if (!_ball.isMoving || _ball.isHitable)
+          {
+              OnStopMoving();
+          }
+          else
+          {
+              OnMoving();
+          }
         }
-    }
 
-    // Method that makes the golf ball untouchable while it is moving
-    void OnMoving()
-    {
-        _changeLayerName.StoreOriginalLayers(transform);
-        _changeLayerName.SetLayerRecursively(gameObject);
-        _golfBallRenderer.material = moveMaterial;
-    }
+        private void OnTriggerStay(Collider other)
+        {
+            if (other.CompareTag("GolfHole"))
+            {
+                //_changeLayerName.targetLayerName = "PassThroughPlane";
+                //_changeLayerName.SetLayerRecursively(gameObject);
+                _ball.isInhole = true;
+                Debug.Log("GolfBall reached the hole. Needed hits: " +  _ball.hitCount);
+            }
 
-    void OnStopMoving()
-    {
-        _changeLayerName.RestoreOriginalLayers();
-        _golfBallRenderer.material = stopMaterial;
+            if (other.CompareTag("GolfClubPart") && _ball.isMoving)
+            {
+                _ball.isHitable = false;
+            }
+        }
+
+        // register the hit and count the hits
+        private void OnCollisionEnter(Collision other)
+        {
+           if (other.gameObject.CompareTag("GolfClubRoot") && _ball.isHitable) 
+           {
+               _registerHit.RegisterHitLog();
+           }
+        }
+
+        // Method that makes the golf ball untouchable while it is moving
+        void OnMoving()
+        {
+            MakeUntouchable();
+        }
+
+        void OnStopMoving()
+        {
+           MakeTouchable();
+        }
+
+        private void MakeUntouchable()
+        {
+            _changeLayerName.targetLayerName = "IgnoreHitLayer"; // Problem: Conflict with layer name change when ball reaches the golf hole (fixed when using real 3D golf hole)
+            _changeLayerName.StoreOriginalLayers(transform);
+            _changeLayerName.SetLayerRecursively(gameObject);
+            _golfBallRenderer.material = moveMaterial;
+        }
+
+        private void MakeTouchable()
+        {
+            _changeLayerName.RestoreOriginalLayers();
+            _golfBallRenderer.material = stopMaterial;
+        }
     }
 }
