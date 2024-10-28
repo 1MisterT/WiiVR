@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a215b350-de52-4c3a-9564-8e58655fe270" name="Changes" comment="COMMIT: added 3D BA Map" />
+    <list default="true" id="a215b350-de52-4c3a-9564-8e58655fe270" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.WiiVR/.idea/shelf/Changes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WiiVR/.idea/shelf/Changes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.WiiVR/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WiiVR/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameBowling.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameBowling.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/mainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/mainScene.unity" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,12 +37,12 @@
     &quot;assignee&quot;: &quot;1MisterT&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/1MisterT/WiiVR.git",
-    "accountId": "0e81eaf9-6dad-4f16-b2a7-241e4b9bc4f2"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/1MisterT/WiiVR.git&quot;,
+    &quot;accountId&quot;: &quot;7931449a-7082-47eb-8ec9-e289985556ed&quot;
   }
-}]]></component>
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0aecc392d76442ba84ceccd84292cdbb4800/1b/0600470c/XRSettings.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0b78209fd00d4f419f30dd210cbab239176600/8e/e13913ee/SetupCoroutine.cs" root0="FORCE_HIGHLIGHTING" />
@@ -64,22 +69,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Attach to Unity Editor.Attach to Unity Editor.executor&quot;: &quot;Debug&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.6666667&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev/bowling&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "XThreadsFramesViewSplitterKey": "0.6666667",
+    "git-widget-placeholder": "dev/bowling",
+    "ignore.virus.scanning.warn.message": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="$USER_HOME$/Unity/Hub/Editor/2022.3.46f1/Editor/Unity" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.46f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath C:\Users\tom\RiderProjects\WiiVR -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Users\tom\RiderProjects\WiiVR" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -87,7 +93,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="$USER_HOME$/Unity/Hub/Editor/2022.3.46f1/Editor/Unity" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.46f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath C:\Users\tom\RiderProjects\WiiVR -testResults Logs/results.xml -logFile Logs/Editor.log -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Users\tom\RiderProjects\WiiVR" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -141,7 +147,6 @@
       <updated>1729156860255</updated>
       <workItem from="1729156862180" duration="202000" />
       <workItem from="1729171191774" duration="2133000" />
-      <workItem from="1730050622778" duration="1260000" />
     </task>
     <task id="LOCAL-00003" summary="MERGE: golf and bowling">
       <option name="closed" value="true" />
@@ -175,23 +180,7 @@
       <option name="project" value="LOCAL" />
       <updated>1729174275812</updated>
     </task>
-    <task id="LOCAL-00007" summary="CHANGE: added new sounds, pin knock + ball roll">
-      <option name="closed" value="true" />
-      <created>1729860716889</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1729860716889</updated>
-    </task>
-    <task id="LOCAL-00008" summary="COMMIT: added 3D BA Map">
-      <option name="closed" value="true" />
-      <created>1730102359329</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1730102359329</updated>
-    </task>
-    <option name="localTasksCounter" value="9" />
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -213,9 +202,7 @@
     <MESSAGE value="MERGE: golf and bowling" />
     <MESSAGE value="MERGE: merged dev main to main" />
     <MESSAGE value="CHANGE: renamed golf scene and fixed to work with vr headset" />
-    <MESSAGE value="CHANGE: added new sounds, pin knock + ball roll" />
-    <MESSAGE value="COMMIT: added 3D BA Map" />
-    <option name="LAST_COMMIT_MESSAGE" value="COMMIT: added 3D BA Map" />
+    <option name="LAST_COMMIT_MESSAGE" value="CHANGE: renamed golf scene and fixed to work with vr headset" />
     <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
   </component>
 </project>

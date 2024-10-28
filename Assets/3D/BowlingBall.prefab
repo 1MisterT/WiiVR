@@ -391,7 +391,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 0
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -510,7 +510,7 @@ MonoBehaviour:
   m_VelocityDamping: 0.9
   m_VelocityScale: 1
   m_AngularVelocityDamping: 1
-  m_AngularVelocityScale: 1
+  m_AngularVelocityScale: 0.5
   m_TrackPosition: 1
   m_SmoothPosition: 1
   m_SmoothPositionAmount: 13
@@ -529,8 +529,17 @@ MonoBehaviour:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0.9995813
-      value: 1.0018814
+      time: 0
+      value: 0
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -541,7 +550,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   m_ThrowVelocityScale: 2
-  m_ThrowAngularVelocityScale: 1
+  m_ThrowAngularVelocityScale: 0.5
   m_ForceGravityOnDetach: 1
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
@@ -560,7 +569,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff7b223b4bf4f71dd855291ba7638682, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startSpeed: {x: 0, y: 0, z: -1}
+  startSpeed: {x: 0, y: 0, z: 0}
   ballMass: 10
   massDisplay: {fileID: 466979715968336913}
 --- !u!82 &-7312048779650577803
