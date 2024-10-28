@@ -7,8 +7,7 @@
     <list default="true" id="b0107747-e610-4c99-a1d0-4802130588dd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WiiVR-main/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WiiVR-main/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameGolf.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameGolf.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Golf/GolfBallInteractionScript.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Golf/GolfBallInteractionScript.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Golf/GolfBallInteraction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Golf/GolfBallInteraction.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +105,7 @@
       <workItem from="1729965391087" duration="3599000" />
       <workItem from="1730045442658" duration="7989000" />
       <workItem from="1730063176631" duration="3386000" />
-      <workItem from="1730107040964" duration="1625000" />
+      <workItem from="1730107040964" duration="2794000" />
     </task>
     <servers />
   </component>

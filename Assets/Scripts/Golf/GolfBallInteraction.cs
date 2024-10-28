@@ -52,8 +52,6 @@ namespace Golf
         {
             if (other.CompareTag("GolfHole"))
             {
-                //_changeLayerName.targetLayerName = "PassThroughPlane";
-                //_changeLayerName.SetLayerRecursively(gameObject);
                 _ball.isInhole = true;
                 Debug.Log("GolfBall reached the hole. Needed hits: " +  _ball.hitCount);
             }
@@ -86,7 +84,7 @@ namespace Golf
 
         private void MakeUntouchable()
         {
-            _changeLayerName.targetLayerName = "IgnoreHitLayer"; // Problem: Conflict with layer name change when ball reaches the golf hole (fixed when using real 3D golf hole)
+            _changeLayerName.targetLayerName = "IgnoreHitLayer"; 
             _changeLayerName.StoreOriginalLayers(transform);
             _changeLayerName.SetLayerRecursively(gameObject);
             _golfBallRenderer.material = moveMaterial;
