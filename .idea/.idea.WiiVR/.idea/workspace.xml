@@ -4,18 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a215b350-de52-4c3a-9564-8e58655fe270" name="Changes" comment="idk">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SceneLoader.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SceneLoader.cs.meta" afterDir="false" />
+    <list default="true" id="a215b350-de52-4c3a-9564-8e58655fe270" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WiiVR/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WiiVR/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/3D/Bowling Pin.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3D/Bowling Pin.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3D/golfScene.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3D/golfScene.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3D/main.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3D/main.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3D/mainMenu.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3D/mainMenu.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3D/bowlingScene.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3D/bowlingScene.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MainLightSettings.lighting" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MainLightSettings.lighting" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/BirdviewCamera.renderTexture" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/BirdviewCamera.renderTexture.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Light.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Light.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameBowling.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameBowling.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameGolf.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameGolf.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameMenu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/mainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/mainScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bowling/BowlingBall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bowling/BowlingBall.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bowling/BowlingController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bowling/BowlingController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bowling/BowlingUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bowling/BowlingUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bowling/BownlingPin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bowling/BownlingPin.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +60,8 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0b78209fd00d4f419f30dd210cbab239176600/8e/e13913ee/SetupCoroutine.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0b78209fd00d4f419f30dd210cbab239176600/db/9b39e469/Component.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8ce0bd04a7a04b4b9395538239d3fdd846ac00/40/bde52b9b/NullReferenceException.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/tom/RiderProjects/WiiVR/Assets/Scenes/mainScene.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/tom/RiderProjects/WiiVR/Assets/Scripts/Bowling/BowlingController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/tom/RiderProjects/WiiVR/Assets/Scripts/Bowling/BowlingController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/Utilities/DelegateHelpers.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventSystem.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/GraphicRaycaster.cs" root0="SKIP_HIGHLIGHTING" />
@@ -117,10 +123,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="33820">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="33820" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -154,6 +160,9 @@
       <updated>1729156860255</updated>
       <workItem from="1729156862180" duration="202000" />
       <workItem from="1729171191774" duration="2133000" />
+      <workItem from="1730129562822" duration="2943000" />
+      <workItem from="1730140968271" duration="8165000" />
+      <workItem from="1730185919898" duration="3864000" />
     </task>
     <task id="LOCAL-00003" summary="MERGE: golf and bowling">
       <option name="closed" value="true" />
@@ -209,6 +218,17 @@
     <option name="unityProjectFolder" value="true" />
   </component>
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
@@ -221,5 +241,12 @@
     <MESSAGE value="idk" />
     <option name="LAST_COMMIT_MESSAGE" value="idk" />
     <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="Type#UnityEngine.GameObject" memberName="gameObject" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>

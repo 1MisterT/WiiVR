@@ -1,5 +1,7 @@
+using System;
 using Basics;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.XR.Interaction.Toolkit;
@@ -36,6 +38,7 @@ namespace Bowling
             else
             {
                 massDisplay.gameObject.SetActive(true);
+                _audioSource.mute = true;
             }
             _audioSource.volume = Mathf.Clamp(Rigidbody.velocity.magnitude, 0, 1);
             if (!Mathf.Approximately(ballMass, Rigidbody.mass))
@@ -59,6 +62,11 @@ namespace Bowling
         public void DecreaseMass(float amount)
         {
             ballMass -= amount;
+        }
+
+        private void OnCollisionEnter(Collision other)
+        {
+            _audioSource.mute = false;
         }
     }
 }
