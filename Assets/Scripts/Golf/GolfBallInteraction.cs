@@ -18,7 +18,6 @@ namespace Golf
 
         private ChangeLayerName _changeLayerName;
         private Ball _ball;
-        private Rigidbody _golfBallRigidbody;
         private RegisterBallHit _registerHit;
 
         private int _counter;
@@ -27,12 +26,10 @@ namespace Golf
         {
             _golfBallRoot = GameObject.FindWithTag("GolfBallRoot");
             _golfBallMesh = _golfBallRoot.GetNamedChild("GolfBallMesh");
-            
-            _golfBallRigidbody = _golfBallRoot.GetComponent<Rigidbody>();
             _golfBallRenderer = _golfBallMesh.GetComponent<Renderer>();
-            _changeLayerName = _golfBallRoot.GetComponent<ChangeLayerName>();
             _ball = _golfBallRoot.GetComponent<Ball>();
             
+            _changeLayerName = _golfBallRoot.GetComponent<ChangeLayerName>();
             _registerHit = gameObject.GetComponent<RegisterBallHit>();
         }
 

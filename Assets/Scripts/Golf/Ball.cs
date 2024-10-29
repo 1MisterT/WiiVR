@@ -8,8 +8,7 @@ namespace Golf
     {
         // public property will be set by other scripts and handles the logic of disabling the collision collider when the ball is in the hole
         private bool _isInHole;
-        public bool isInhole {get => _isInHole; set { _isInHole = value; }
-        }
+        public bool isInhole {get => _isInHole; set => _isInHole = value;  }
 
         private bool _hitRegisteredThisFrame;
         public bool hitRegisteredThisFrame {get => _hitRegisteredThisFrame; set => _hitRegisteredThisFrame = value; }
@@ -20,17 +19,16 @@ namespace Golf
 
         public bool isIdle { get; private set; }
         public bool isMoving { get; private set; }
-        public bool wasMoving { get; private set; }
+        private bool _wasMoving;
         
 
         private Rigidbody _rigidbody;
         private Collider[] _colliderList;
-        private Collider _collisionCollider;
+        public Collider collisionCollider { get; private set; }
+        public Collider triggerCollider { get; private set; }
         private Coroutine _movementCheckCoroutine;
 
-        private float _hitCooldown = 0.1f; // 0.1-second cooldown before ball can be hit again
-        private float _lastHitTime;
-
+        private RegisterBallHit _registerBallHit;
         private int _hitCount;
         public int hitCount { get => _hitCount; set { _hitCount = value; } }
 
@@ -40,7 +38,7 @@ namespace Golf
             _rigidbody = GetComponent<Rigidbody>();
             if (gameObject.GetComponent<Collider>() != null && !gameObject.GetComponent<Collider>().isTrigger)
             {
-                _collisionCollider = gameObject.GetComponent<Collider>();
+                collisionCollider = gameObject.GetComponent<Collider>();
             }
             else
             {
@@ -48,11 +46,13 @@ namespace Golf
                 FindCollisionCollider(_colliderList);
             }
             
+            _registerBallHit = gameObject.GetComponent<RegisterBallHit>();
             _hitCount = 0;
 
         }
         
-        public bool canHit => !isMoving && Time.time - _lastHitTime > _hitCooldown;
+       // canHit accesses the ball hit registration to check if the cooldown has passed after detecting a hit
+        [SerializeField] private bool canHit =>  _registerBallHit.CanRegisterHit();
         private void FixedUpdate()
         {
             // Reset the flag at the beginning of each frame
@@ -86,14 +86,14 @@ namespace Golf
             isMoving = _rigidbody.velocity.magnitude >= 0.02f;
 
             // Check if the movement state has changed
-            if (isMoving != wasMoving)
+            if (isMoving != _wasMoving)
             {
                 isIdle = !isMoving;
                 Debug.Log($@"{name} {(isMoving ? "is moving" : "stopped moving")}");
             }
 
             // Update the previous state for the next frame
-            wasMoving = isMoving;
+            _wasMoving = isMoving;
         }
         
         private void StopTrackMovement()
@@ -111,8 +111,12 @@ namespace Golf
             {
                 if (!col.isTrigger)
                 {
-                    _collisionCollider = col;
+                    collisionCollider = col;
                     break;
+                }
+                else
+                {
+                    triggerCollider = col;
                 }
             }
         }

@@ -4,7 +4,7 @@ namespace Golf
 {
     public class RegisterBallHit : MonoBehaviour
     {
-        private float _hitCooldown = 1f; // 1 second cooldown
+        private const float HitCooldown = 1f; // 1 second cooldown
         private float _lastHitTime;
         
         private Ball _ball;
@@ -15,10 +15,10 @@ namespace Golf
         }
         
         // Method that sets cooldown after the ball was hit
-        private bool CanRegisterHit()
+        public bool CanRegisterHit()
         {
             _ball.isHitable = true;
-            return Time.time - _lastHitTime > _hitCooldown;
+            return Time.time - _lastHitTime > HitCooldown;
         }
 
         // Method that is called when the ball experiences a collision

@@ -12,6 +12,9 @@ TagManager:
   - GolfClubRoot
   - GolfBallRoot
   - GolfBallPart
+  - GolfArea
+  - Golf
+  - PlayerUI
   layers:
   - Default
   - TransparentFX
