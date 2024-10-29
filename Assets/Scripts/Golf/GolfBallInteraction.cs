@@ -18,7 +18,6 @@ namespace Golf
 
         private ChangeLayerName _changeLayerName;
         private Ball _ball;
-        private Rigidbody _golfBallRigidbody;
         private RegisterBallHit _registerHit;
 
         private int _counter;
@@ -27,12 +26,10 @@ namespace Golf
         {
             _golfBallRoot = GameObject.FindWithTag("GolfBallRoot");
             _golfBallMesh = _golfBallRoot.GetNamedChild("GolfBallMesh");
-            
-            _golfBallRigidbody = _golfBallRoot.GetComponent<Rigidbody>();
             _golfBallRenderer = _golfBallMesh.GetComponent<Renderer>();
-            _changeLayerName = _golfBallRoot.GetComponent<ChangeLayerName>();
             _ball = _golfBallRoot.GetComponent<Ball>();
             
+            _changeLayerName = _golfBallRoot.GetComponent<ChangeLayerName>();
             _registerHit = gameObject.GetComponent<RegisterBallHit>();
         }
 
@@ -52,8 +49,6 @@ namespace Golf
         {
             if (other.CompareTag("GolfHole"))
             {
-                //_changeLayerName.targetLayerName = "PassThroughPlane";
-                //_changeLayerName.SetLayerRecursively(gameObject);
                 _ball.isInhole = true;
                 Debug.Log("GolfBall reached the hole. Needed hits: " +  _ball.hitCount);
             }
@@ -86,7 +81,7 @@ namespace Golf
 
         private void MakeUntouchable()
         {
-            _changeLayerName.targetLayerName = "IgnoreHitLayer"; // Problem: Conflict with layer name change when ball reaches the golf hole (fixed when using real 3D golf hole)
+            _changeLayerName.targetLayerName = "IgnoreHitLayer"; 
             _changeLayerName.StoreOriginalLayers(transform);
             _changeLayerName.SetLayerRecursively(gameObject);
             _golfBallRenderer.material = moveMaterial;

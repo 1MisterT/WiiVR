@@ -56,13 +56,13 @@ namespace Golf
         // check hitcount the Ball-Object
         private void DisplayHitCount()
         {
-            scoreText.text = "Hit Count: " + _ball.hitCount; // Update the UI text with the public value
+            scoreText.text = "Golfschläge: " + _ball.hitCount; // Update the UI text with the public value
         }
         
         // check the isInHole property of the Ball-Object and display a victory text if it is true
         private void DisplayVictoryText()
         {
-            scoreText.text = "The golf ball is in the hole! Needed hits: " +  _ball.hitCount;
+            scoreText.text = "Der Ball ist im Golfloch! Benötigte Schläge: " +  _ball.hitCount;
         }
     }
 }
