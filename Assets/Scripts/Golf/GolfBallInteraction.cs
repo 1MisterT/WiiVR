@@ -20,6 +20,8 @@ namespace Golf
         private Ball _ball;
         private RegisterBallHit _registerHit;
 
+        [SerializeField] private AudioClip winSound;
+
         private int _counter;
 
         void Start()
@@ -50,6 +52,7 @@ namespace Golf
             if (other.CompareTag("GolfHole"))
             {
                 _ball.isInhole = true;
+                SoundFXManager.instance.PlaySoundFX(winSound, gameObject.transform);
                 Debug.Log("GolfBall reached the hole. Needed hits: " +  _ball.hitCount);
             }
 

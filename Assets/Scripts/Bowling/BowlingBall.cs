@@ -16,6 +16,7 @@ namespace Bowling
         
         private XRGrabInteractable _grabInteractable;
         private AudioSource _audioSource;
+        private SoundFXManager _soundFXManager;
 
         private TextMeshProUGUI _massScale;
         // Start is called before the first frame update
@@ -26,6 +27,7 @@ namespace Bowling
             _grabInteractable = GetComponent<XRGrabInteractable>();
             _massScale = massDisplay.GetComponentInChildren<TextMeshProUGUI>();
             _audioSource = GetComponent<AudioSource>();
+            _soundFXManager = SoundFXManager.instance;
         }
 
         // Update is called once per frame
@@ -56,11 +58,13 @@ namespace Bowling
 
         public void IncreaseMass(float amount)
         {
+            _soundFXManager.PlaySoundFX(_soundFXManager.uiSound, gameObject.transform);
             ballMass += amount;
         }
 
         public void DecreaseMass(float amount)
         {
+            _soundFXManager.PlaySoundFX(_soundFXManager.uiSound, gameObject.transform);
             ballMass -= amount;
         }
 

@@ -6,6 +6,7 @@ public class SoundFXManager : MonoBehaviour
 {
     public static SoundFXManager instance;
     [SerializeField] private AudioSource _soundFXObject;
+    [SerializeField] public AudioClip uiSound;
 
     private void Awake()
     {
