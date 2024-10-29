@@ -6,29 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b0107747-e610-4c99-a1d0-4802130588dd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WiiVR-main/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WiiVR-main/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Custom XR Elements/Golf/GolfClub.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Custom XR Elements/Golf/GolfClub.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Custom XR Elements/Golf/GolfHole.blend" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Custom XR Elements/Golf/GolfHole.blend.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Custom XR Elements/Golf/GolfHole.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Custom XR Elements/Golf/GolfHole.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Custom XR Elements/Golf/RealisticGolfClub.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Custom XR Elements/Golf/RealisticGolfClub.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameGolf.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameGolf.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GolfWorkingScene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GolfWorkingScene.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/mainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/mainScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ChangeTagName.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ChangeTagName.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dropper.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dropper.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Golf/Ball.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Golf/Ball.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Golf/DisplayHitScore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Golf/DisplayHitScore.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Golf/GolfBallInteraction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Golf/GolfBallInteraction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Golf/GrabInteractableSetup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Golf/GrabInteractableSetup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Golf/RegisterBallHit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Golf/RegisterBallHit.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/RespawnObjects.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RespawnObjects.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tube.blend" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tube.blend.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +106,7 @@
       <workItem from="1730045442658" duration="7989000" />
       <workItem from="1730063176631" duration="3386000" />
       <workItem from="1730107040964" duration="17404000" />
-      <workItem from="1730221092668" duration="2376000" />
+      <workItem from="1730221092668" duration="5189000" />
     </task>
     <servers />
   </component>

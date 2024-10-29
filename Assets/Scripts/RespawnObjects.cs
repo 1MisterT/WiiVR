@@ -9,9 +9,14 @@ public class RespawnObjects : MonoBehaviour
     private GameObject _golfBall;
     private Transform _golfBallRoot; // reference the root object of golf ball to adress all its child objects when teleporting it later
     private ChangeLayerName _golfBallChangeLayer;
+    private GameObject _golfBallRespawnPoint;
+
+    public GameObject setGameObject;
+    public GameObject setRespawnPoint;
     
     private GameObject _golfClub;
     private Transform _golfClubRoot; // the same process as _golfBallRoot
+    private GameObject _golfClubRespawnPoint;
     
     private Transform _collidingGameObjectParent;
     private GameObject _collidingGameObject;
@@ -37,11 +42,22 @@ public class RespawnObjects : MonoBehaviour
         _golfBallRoot = _golfBall.GetComponent<Transform>();
         
         
-        if (respawnPoint == null)
+        if (_golfBallRespawnPoint == null)
         {
-            respawnPoint = GameObject.Find("RespawnArea").GetNamedChild("RespawnPoint");
+            _golfBallRespawnPoint = GameObject.Find("GolfBallRespawnArea").GetNamedChild("RespawnPoint");
 
             if (respawnPoint == null)
+            {
+                Debug.LogError("No respawn point for respawning objects set in inspector nor could find one in the scene");
+            }
+        }
+        
+        
+        if (_golfClubRespawnPoint == null)
+        {
+            _golfClubRespawnPoint = GameObject.Find("GolfClubRespawnArea").GetNamedChild("RespawnPoint");
+
+            if (_golfClubRespawnPoint == null)
             {
                 Debug.LogError("No respawn point for respawning objects set in inspector nor could find one in the scene");
             }
@@ -66,12 +82,12 @@ public class RespawnObjects : MonoBehaviour
             if (parentTransform != null)
             {
                 _collidingGameObjectParent = other.transform.parent;
-                RespawnGameObjectParent(_collidingGameObjectParent);
+                RespawnGameObjectParent(_collidingGameObjectParent, respawnPoint);
             } 
             else if (other.gameObject != null)
             {
                 _collidingGameObject = other.gameObject;
-                RespawnGameObject(_collidingGameObject);
+                //RespawnGameObject(_collidingGameObject);
             } 
             else
             {
@@ -80,12 +96,12 @@ public class RespawnObjects : MonoBehaviour
         }
     }
 
-    private void RespawnGolfCLub()
+    public void RespawnGolfCLub()
     {
         // Check if golfClubRoot is specifically the golf club (or adjust to use GolfClubRoot directly)
         if (_golfClubRoot.CompareTag("GolfClubRoot"))
         {
-            _golfClubRoot.position = respawnPoint.transform.position; // Move the entire golf club to the respawn point
+            _golfClubRoot.position = _golfClubRespawnPoint.transform.position; // Move the entire golf club to the respawn point
             // make object kinematic and set rotation to 0 so you can grab it properly
             _grabInteractableSetup.EnableKinematic();
             if (_golfClubRoot.name == "GolfClub")
@@ -97,33 +113,41 @@ public class RespawnObjects : MonoBehaviour
                 _golfClubRoot.rotation = Quaternion.Euler(-90, 180, 0);
             }
             
-            Debug.Log("Golf Club respawned at " + respawnPoint.name);
+            Debug.Log("Golf Club respawned at " + _golfClubRespawnPoint.name);
         }
     }
 
-    private void RespawnGolfBall()
+    public void RespawnGolfBall()
     {
         if (_golfBallRoot.CompareTag("GolfBallRoot"))
         {
             _golfBallChangeLayer.targetLayerName = "Default";
             _golfBallChangeLayer.SetLayerRecursively(_golfBall);
-            _golfBallRoot.position = respawnPoint.transform.position;
-            Debug.Log("GolfBall respawned at " + respawnPoint.name);
+            _golfBallRoot.position = _golfBallRespawnPoint.transform.position;
+            Debug.Log("GolfBall respawned at " + _golfBallRespawnPoint.name);
         }
     }
 
     // Respawn any object or its parent
     // in order to determine if it is just a simple Game Object or a Parent object we need to check them before teleporting them to a set respawn point
-    public void RespawnGameObject(GameObject teleportThisGameObject)
+    public void RespawnGameObject(GameObject teleportThisGameObject, GameObject customRespawnPoint)
     {
-        teleportThisGameObject.transform.position = respawnPoint.transform.position;
-        Debug.Log(teleportThisGameObject.name + " respawned at " + respawnPoint.name);
+        teleportThisGameObject.transform.position = customRespawnPoint.transform.position;
+        Debug.Log(teleportThisGameObject.name + " respawned at " + customRespawnPoint.name);
     }
 
-    public void RespawnGameObjectParent(Transform teleportThisGameObjectTransform)
+    public void RespawnGameObjectParent(Transform teleportThisGameObjectTransform, GameObject customRespawnPoint)
     {
-        teleportThisGameObjectTransform.position = respawnPoint.transform.position;
-        Debug.Log(teleportThisGameObjectTransform.name + " respawned at " + respawnPoint.name);
+        teleportThisGameObjectTransform.position = customRespawnPoint.transform.position;
+        Debug.Log(teleportThisGameObjectTransform.name + " respawned at " + customRespawnPoint.name);
     }
     
+    
+    // testing a method that can be invoced by interacting with a button
+    // Problem: Cannot be invoced if it has parameters, so we have to set public Game Objects of the class in the inspector of the button
+    public void RespawnGameObjectTest()
+    {
+        setGameObject.transform.position = setGameObject.transform.position;
+        Debug.Log(setGameObject.name + " respawned at " + setGameObject.name);
+    }
 }
