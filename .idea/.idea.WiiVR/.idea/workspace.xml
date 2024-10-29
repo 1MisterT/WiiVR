@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a215b350-de52-4c3a-9564-8e58655fe270" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.WiiVR/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WiiVR/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3D/bowlingPin.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3D/bowlingPin.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3D/bowlingPin.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3D/bowlingPin.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3D/bowlingPin.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3D/bowlingPin.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Custom XR Elements/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Custom XR Elements/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MainMixer.mixer" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MainMixer.mixer" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/BowlingCam.renderTexture" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/BowlingCam.renderTexture" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/PinPosition.renderTexture" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/PinPosition.renderTexture" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameBowling.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameBowling.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameGolf.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameGolf.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/mainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/mainScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bowling/BowlingBall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bowling/BowlingBall.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Golf/GolfBallInteraction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Golf/GolfBallInteraction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RespawnObjects.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RespawnObjects.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SoundFXManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SoundFXManager.cs" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
+  </component>
+  <component name="DpaMonitoringSettings">
+    <option name="autoShow" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="dev/bowling" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;1MisterT&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/1MisterT/WiiVR.git&quot;,
+    &quot;accountId&quot;: &quot;7931449a-7082-47eb-8ec9-e289985556ed&quot;
+  }
+}</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0aecc392d76442ba84ceccd84292cdbb4800/1b/0600470c/XRSettings.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0b78209fd00d4f419f30dd210cbab239176600/8e/e13913ee/SetupCoroutine.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0b78209fd00d4f419f30dd210cbab239176600/db/9b39e469/Component.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8ce0bd04a7a04b4b9395538239d3fdd846ac00/40/bde52b9b/NullReferenceException.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/tom/RiderProjects/WiiVR/Assets/Scenes/GameGolf.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/tom/RiderProjects/WiiVR/Assets/Scenes/GameGolf.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Bowling/FrameDisplay.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/Utilities/DelegateHelpers.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventSystem.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/GraphicRaycaster.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@2.6.3/Runtime/Interaction/Interactables/XRGrabInteractable.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.management@4.4.0/Runtime/XRGeneralSettings.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.management@4.4.0/Runtime/XRManagerSettings.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.openxr@1.12.1/Runtime/Features/OpenXRFeature.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="false" />
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2nYjMu3Prr7BmggyDQoXnllYlz8" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "XThreadsFramesViewSplitterKey": "0.8987539",
+    "git-widget-placeholder": "dev/main",
+    "ignore.virus.scanning.warn.message": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.46f1\Editor\Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="-projectPath C:\Users\tom\RiderProjects\WiiVR -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\tom\RiderProjects\WiiVR" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.46f1\Editor\Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath C:\Users\tom\RiderProjects\WiiVR -testResults Logs/results.xml -logFile Logs/Editor.log -testPlatform EditMode -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\tom\RiderProjects\WiiVR" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="39252">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" value="39252" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task id="LOCAL-00001" summary="COMMIT: idk">
+      <option name="closed" value="true" />
+      <created>1729154032372</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1729154032372</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Merge branch 'dev/velocity' into dev/main&#10;&#10;# Conflicts:&#10;#&#9;Assets/Samples/XR Interaction Toolkit/2.6.3/Starter Assets/DemoScene.unity.meta&#10;#&#9;ProjectSettings/EditorBuildSettings.asset&#10;#&#9;ProjectSettings/ProjectSettings.asset&#10;#&#9;ProjectSettings/QualitySettings.asset&#10;#&#9;ProjectSettings/TagManager.asset">
+      <option name="closed" value="true" />
+      <created>1729154088629</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1729154088629</updated>
+    </task>
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a215b350-de52-4c3a-9564-8e58655fe270" name="Changes" comment="Merge branch 'dev/velocity' into dev/main&#10;&#10;# Conflicts:&#10;#&#9;Assets/Samples/XR Interaction Toolkit/2.6.3/Starter Assets/DemoScene.unity.meta&#10;#&#9;ProjectSettings/EditorBuildSettings.asset&#10;#&#9;ProjectSettings/ProjectSettings.asset&#10;#&#9;ProjectSettings/QualitySettings.asset&#10;#&#9;ProjectSettings/TagManager.asset" />
+      <created>1729156860255</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1729156860255</updated>
+      <workItem from="1729156862180" duration="202000" />
+      <workItem from="1729171191774" duration="2133000" />
+      <workItem from="1730129562822" duration="2943000" />
+      <workItem from="1730140968271" duration="8165000" />
+      <workItem from="1730185919898" duration="4775000" />
+      <workItem from="1730215085477" duration="3510000" />
+    </task>
+    <task id="LOCAL-00003" summary="MERGE: golf and bowling">
+      <option name="closed" value="true" />
+      <created>1729156915159</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1729156915159</updated>
+    </task>
+    <task id="LOCAL-00004" summary="MERGE: merged dev main to main">
+      <option name="closed" value="true" />
+      <created>1729156947645</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1729156947645</updated>
+    </task>
+    <task id="LOCAL-00005" summary="CHANGE: renamed golf scene and fixed to work with vr headset">
+      <option name="closed" value="true" />
+      <created>1729174171794</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1729174171794</updated>
+    </task>
+    <task id="LOCAL-00006" summary="CHANGE: renamed golf scene and fixed to work with vr headset">
+      <option name="closed" value="true" />
+      <created>1729174275812</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1729174275812</updated>
+    </task>
+    <task id="LOCAL-00007" summary="idk">
+      <option name="closed" value="true" />
+      <created>1730116427530</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1730116427530</updated>
+    </task>
+    <task id="LOCAL-00008" summary="CHANGE: added lights + added bowling display">
+      <option name="closed" value="true" />
+      <created>1730200655097</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1730200655097</updated>
+    </task>
+    <task id="LOCAL-00009" summary="CHANGE: all Scenes working, ready for final merge">
+      <option name="closed" value="true" />
+      <created>1730216371182</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1730216371182</updated>
+    </task>
+    <task id="LOCAL-00010" summary="FIX: sound and bowlingbahn">
+      <option name="closed" value="true" />
+      <created>1730218068111</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1730218068111</updated>
+    </task>
+    <task id="LOCAL-00011" summary="FIX: sound and bowlingbahn">
+      <option name="closed" value="true" />
+      <created>1730218405976</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1730218405976</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="false" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityProjectDiscoverer">
+    <option name="hasUnityReference" value="true" />
+    <option name="unityProject" value="true" />
+    <option name="unityProjectFolder" value="true" />
+  </component>
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="COMMIT: idk" />
+    <MESSAGE value="Merge branch 'dev/velocity' into dev/main&#10;&#10;# Conflicts:&#10;#&#9;Assets/Samples/XR Interaction Toolkit/2.6.3/Starter Assets/DemoScene.unity.meta&#10;#&#9;ProjectSettings/EditorBuildSettings.asset&#10;#&#9;ProjectSettings/ProjectSettings.asset&#10;#&#9;ProjectSettings/QualitySettings.asset&#10;#&#9;ProjectSettings/TagManager.asset" />
+    <MESSAGE value="MERGE: golf and bowling" />
+    <MESSAGE value="MERGE: merged dev main to main" />
+    <MESSAGE value="CHANGE: renamed golf scene and fixed to work with vr headset" />
+    <MESSAGE value="hands" />
+    <MESSAGE value="idk" />
+    <MESSAGE value="CHANGE: added lights + added bowling display" />
+    <MESSAGE value="CHANGE: all Scenes working, ready for final merge" />
+    <MESSAGE value="FIX: sound and bowlingbahn" />
+    <option name="LAST_COMMIT_MESSAGE" value="FIX: sound and bowlingbahn" />
+    <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="Type#UnityEngine.GameObject" memberName="gameObject" />
+      </pinned-members>
+    </pin-to-top-manager>
+  </component>
+</project>

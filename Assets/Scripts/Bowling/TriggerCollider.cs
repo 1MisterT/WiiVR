@@ -11,11 +11,11 @@ namespace Bowling
         void Start()
         {
             _bowlingController = BowlingController.instance;
-            _bowlingController.softResetEvent += (sender, args) =>
+            _bowlingController.SoftResetEvent += (sender, args) =>
             {
                 _activeBall = null;
             };
-            _bowlingController.hardResetEvent += (sender, args) =>
+            _bowlingController.HardResetEvent += (sender, args) =>
             {
                 _activeBall = null;
             };
@@ -36,7 +36,7 @@ namespace Bowling
                 return;
             }
             _activeBall = other.gameObject.GetComponent<Rigidbody>();
-            if (triggerTurn) _bowlingController.BallRolled(other.gameObject);
+            _bowlingController.BallRolled(other.gameObject, triggerTurn);
         }
     }
 }
