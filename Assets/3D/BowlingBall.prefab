@@ -378,7 +378,7 @@ Rigidbody:
   m_GameObject: {fileID: 5827446868364883336}
   serializedVersion: 4
   m_Mass: 8
-  m_Drag: 0.01
+  m_Drag: 0.001
   m_AngularDrag: 0.001
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 0.5, y: 0.5, z: 0.5}
@@ -550,7 +550,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   m_ThrowVelocityScale: 2
-  m_ThrowAngularVelocityScale: 0.5
+  m_ThrowAngularVelocityScale: 0.25
   m_ForceGravityOnDetach: 1
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
@@ -584,7 +584,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 2423241296552911452, guid: 0ca5871b7c1382b4b95a483b2725820a, type: 2}
   m_audioClip: {fileID: 8300000, guid: a9deff0d202975ae5a0b14d7dfd40807, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.268
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -628,7 +628,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
