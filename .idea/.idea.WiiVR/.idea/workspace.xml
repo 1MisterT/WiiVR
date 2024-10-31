@@ -57,6 +57,10 @@
   &quot;lastFilter&quot;: {
     &quot;state&quot;: &quot;OPEN&quot;,
     &quot;assignee&quot;: &quot;1MisterT&quot;
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/1MisterT/WiiVR.git&quot;,
+    &quot;accountId&quot;: &quot;7931449a-7082-47eb-8ec9-e289985556ed&quot;
   }
 }</component>
   <component name="GithubPullRequestsUISettings">{
@@ -64,6 +68,7 @@
     &quot;url&quot;: &quot;https://github.com/1MisterT/WiiVR.git&quot;,
     &quot;accountId&quot;: &quot;7931449a-7082-47eb-8ec9-e289985556ed&quot;
   }
+}</component>
 }</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0aecc392d76442ba84ceccd84292cdbb4800/1b/0600470c/XRSettings.cs" root0="FORCE_HIGHLIGHTING" />
@@ -105,9 +110,15 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
+    "XThreadsFramesViewSplitterKey": "0.49422634",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)"
   }
 }]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+  <component name="RunManager" selected="Standalone Player.Start Unity">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.46f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath C:\Users\tom\RiderProjects\WiiVR -debugCodeOptimization" />
