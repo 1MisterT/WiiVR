@@ -23,9 +23,12 @@ public class RespawnObjects : MonoBehaviour
 
     private GrabInteractableSetup _grabInteractableSetup;
     private GolfGameManager.IRespawn _respawnImplementation;
+    
+    private SoundFXManager _soundFXManager;
 
     private void Start()
     {
+        _soundFXManager = SoundFXManager.instance;
         _golfBall = GameObject.Find("GolfBall");
         _golfBallChangeLayer = _golfBall.GetComponent<ChangeLayerName>();
         
@@ -98,6 +101,7 @@ public class RespawnObjects : MonoBehaviour
 
     public void RespawnGolfCLub()
     {
+        _soundFXManager.PlaySoundFX(_soundFXManager.uiSound, gameObject.transform);
         // Check if golfClubRoot is specifically the golf club (or adjust to use GolfClubRoot directly)
         if (_golfClubRoot.CompareTag("GolfClubRoot"))
         {
@@ -119,6 +123,7 @@ public class RespawnObjects : MonoBehaviour
 
     public void RespawnGolfBall()
     {
+        _soundFXManager.PlaySoundFX(_soundFXManager.uiSound, gameObject.transform);
         if (_golfBallRoot.CompareTag("GolfBallRoot"))
         {
             _golfBallChangeLayer.targetLayerName = "Default";

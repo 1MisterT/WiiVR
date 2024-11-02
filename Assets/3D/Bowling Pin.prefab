@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2585166184251236820}
   - component: {fileID: 493275827477709822}
   - component: {fileID: 2848478436390769424}
+  - component: {fileID: 7760183403624056350}
   m_Layer: 0
   m_Name: Bowling Pin
   m_TagString: Untagged
@@ -126,6 +127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4be9e1a994837a7b9d28529260d41c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  knockTreshold: 0.7
 --- !u!136 &2848478436390769424
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -145,7 +147,30 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.058111716
-  m_Height: 0.37970734
+  m_Radius: 0.059319437
+  m_Height: 0.16
   m_Direction: 1
-  m_Center: {x: 0, y: 0.18979678, z: -0.0000000037252903}
+  m_Center: {x: 0, y: 0.13, z: 0}
+--- !u!136 &7760183403624056350
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1324128551782999414}
+  m_Material: {fileID: 13400000, guid: 89c38b2d0f4842c5b8bbe423834f7129, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.041667804
+  m_Height: 0.38080496
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.18924797, z: 0}
