@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b0107747-e610-4c99-a1d0-4802130588dd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WiiVR-main/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WiiVR-main/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Custom XR Elements/Golf/GolfBall.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Custom XR Elements/Golf/GolfBall.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameGolf.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameGolf.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RespawnObjects.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RespawnObjects.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +106,7 @@
       <workItem from="1730045442658" duration="7989000" />
       <workItem from="1730063176631" duration="3386000" />
       <workItem from="1730107040964" duration="17404000" />
-      <workItem from="1730221092668" duration="5189000" />
+      <workItem from="1730221092668" duration="8079000" />
     </task>
     <servers />
   </component>

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1062239491992421433
+--- !u!1 &2384317921377838850
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,45 +8,48 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1331522848317845459}
-  - component: {fileID: 8358498664590183314}
-  - component: {fileID: 838994541548538847}
-  - component: {fileID: 7754167307595374135}
+  - component: {fileID: 7774913197115027776}
+  - component: {fileID: 2192177804720644129}
+  - component: {fileID: 2139762107912443659}
+  - component: {fileID: 2744300529159619969}
+  - component: {fileID: 533750175547331357}
+  - component: {fileID: 7450444413214121752}
+  - component: {fileID: 8777873579770410079}
   m_Layer: 0
   m_Name: GolfBall
-  m_TagString: GolfBall
+  m_TagString: GolfBallRoot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1331522848317845459
+--- !u!4 &7774913197115027776
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1062239491992421433}
+  m_GameObject: {fileID: 2384317921377838850}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.45792615, y: -0.5091414, z: -0.06499982}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -18.312, y: 0.432, z: -4.224}
+  m_LocalScale: {x: 0.58457, y: 0.58457, z: 0.58457}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 6849247307610158795}
-  - {fileID: 6790749917106585529}
+  - {fileID: 2416999629185237689}
+  - {fileID: 2584909991282409604}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &8358498664590183314
+--- !u!54 &2192177804720644129
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1062239491992421433}
+  m_GameObject: {fileID: 2384317921377838850}
   serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0.3
-  m_AngularDrag: 0.05
+  m_Mass: 0.5
+  m_Drag: 0.5
+  m_AngularDrag: 1.5
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -62,88 +65,73 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 1
   m_Constraints: 0
-  m_CollisionDetection: 2
---- !u!114 &838994541548538847
+  m_CollisionDetection: 1
+--- !u!114 &2139762107912443659
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1062239491992421433}
+  m_GameObject: {fileID: 2384317921377838850}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 33336c2e3f861064b9741f4687946f96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   moveMaterial: {fileID: 2100000, guid: 9b3dc38741281d546aca6c755a4b9dd7, type: 2}
-  stopMaterial: {fileID: 2100000, guid: 3929f342ee3429b478eca33e36311535, type: 2}
---- !u!114 &7754167307595374135
+  stopMaterial: {fileID: 2100000, guid: 938ebb675d15bca4e9cff3b33471feb1, type: 2}
+--- !u!114 &2744300529159619969
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1062239491992421433}
+  m_GameObject: {fileID: 2384317921377838850}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cd08e97beb3bf0c4c87c164d5737ad5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   targetLayerName: IgnoreHitLayer
---- !u!1 &2467128810211738259
-GameObject:
+--- !u!114 &533750175547331357
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6790749917106585529}
-  - component: {fileID: 2203116216488157445}
-  m_Layer: 0
-  m_Name: GolfBallTrigger
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6790749917106585529
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2467128810211738259}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1331522848317845459}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &2203116216488157445
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2467128810211738259}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
+  m_GameObject: {fileID: 2384317921377838850}
   m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.06
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &6327406392750544026
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29eaa052abe9ddc4abbbb83c5d51ad65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7450444413214121752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2384317921377838850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61ae059d8084cde48848ef210f594657, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8777873579770410079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2384317921377838850}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eda63f0486b93c040a329163dbad4835, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitCount: 0
+  cooldownTime: 0.2
+--- !u!1 &3527946731709022917
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -151,47 +139,47 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6849247307610158795}
-  - component: {fileID: 4861328972556621209}
-  - component: {fileID: 5089985700174303215}
-  - component: {fileID: 8482082221851468221}
+  - component: {fileID: 2416999629185237689}
+  - component: {fileID: 4754625518020178471}
+  - component: {fileID: 5127168402020437416}
+  - component: {fileID: 3852842899918850102}
   m_Layer: 0
   m_Name: GolfBallMesh
-  m_TagString: GolfBall
+  m_TagString: GolfBallPart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6849247307610158795
+--- !u!4 &2416999629185237689
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6327406392750544026}
+  m_GameObject: {fileID: 3527946731709022917}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.09661881, y: 0.09661881, z: 0.09661881}
+  m_LocalScale: {x: 0.097469054, y: 0.097469054, z: 0.097469054}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1331522848317845459}
+  m_Father: {fileID: 7774913197115027776}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &4861328972556621209
+--- !u!33 &4754625518020178471
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6327406392750544026}
+  m_GameObject: {fileID: 3527946731709022917}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &5089985700174303215
+--- !u!23 &5127168402020437416
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6327406392750544026}
+  m_GameObject: {fileID: 3527946731709022917}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -227,14 +215,14 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &8482082221851468221
+--- !u!135 &3852842899918850102
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6327406392750544026}
-  m_Material: {fileID: 0}
+  m_GameObject: {fileID: 3527946731709022917}
+  m_Material: {fileID: 13400000, guid: 3b6774cfdaac57a41840f978f358be61, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -246,5 +234,58 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
+  m_Radius: 0.499
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &3762161333621218991
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2584909991282409604}
+  - component: {fileID: 1558169735178344868}
+  m_Layer: 0
+  m_Name: GolfBallTrigger
+  m_TagString: GolfBallPart
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2584909991282409604
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3762161333621218991}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7774913197115027776}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &1558169735178344868
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3762161333621218991}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.049
   m_Center: {x: 0, y: 0, z: 0}
