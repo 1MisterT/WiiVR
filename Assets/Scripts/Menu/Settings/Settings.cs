@@ -16,6 +16,7 @@ namespace Menu.Settings
     {
         [MinMax(0f, 1f)] private double _backgroundMusic = .5;
 
+        [SettingsElement("Slider_BackgroundMusic_Bindable")]
         public double backgroundMusic
         {
             get => _backgroundMusic;
@@ -24,6 +25,7 @@ namespace Menu.Settings
         
         [MinMax(0f, 1f)] private double _soundEffects = .5;
 
+        [SettingsElement("Slider_SoundEffects_Bindable")]
         public double soundEffects
         {
             get => _soundEffects;

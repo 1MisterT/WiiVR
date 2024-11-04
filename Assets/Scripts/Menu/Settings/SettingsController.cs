@@ -50,5 +50,10 @@ namespace Menu.Settings
                 SubscribeToChanges(val);
             }
         }
+
+        public static void SetValue(object o, string target)
+        {
+            
+        }
     }
 }
