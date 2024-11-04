@@ -2,6 +2,8 @@ using UnityEngine;
 using UnityEngine.XR.Management;
 using System.Collections;
 
+// Copyright (C) Tom Troeger
+
 public class ResetOpenXR : MonoBehaviour {
 
 #if UNITY_EDITOR
@@ -35,7 +37,7 @@ public class ResetOpenXR : MonoBehaviour {
         XRGeneralSettings.Instance?.Manager?.InitializeLoaderSync();
  
         if (XRGeneralSettings.Instance?.Manager?.activeLoader == null){
-            Debug.LogError("Initializing XR Failed. Check Editor or Player log for details.");
+            //Debug.LogError("Initializing XR Failed. Check Editor or Player log for details.");
         }
         else {
             XRGeneralSettings.Instance?.Manager?.StartSubsystems();

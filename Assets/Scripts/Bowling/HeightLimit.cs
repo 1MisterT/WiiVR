@@ -1,9 +1,11 @@
 using Basics;
 using UnityEngine;
 
+/* Copyright (C) Tom Troeger */
+
 namespace Bowling
 {
-    public class HightLimit : MonoBehaviour
+    public class HeightLimit : MonoBehaviour
     {
         private void OnTriggerEnter(Collider other)
         {

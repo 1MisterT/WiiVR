@@ -1,10 +1,9 @@
-using System;
 using Basics;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.XR.Interaction.Toolkit;
+
+/* Copyright (C) Tom Troeger */
 
 namespace Bowling
 {
@@ -27,7 +26,7 @@ namespace Bowling
             _grabInteractable = GetComponent<XRGrabInteractable>();
             _massScale = massDisplay.GetComponentInChildren<TextMeshProUGUI>();
             _audioSource = GetComponent<AudioSource>();
-            _soundFXManager = SoundFXManager.instance;
+            _soundFXManager = SoundFXManager.Instance;
         }
 
         // Update is called once per frame

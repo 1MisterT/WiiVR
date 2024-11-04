@@ -1,7 +1,5 @@
 using TMPro;
-using Unity.AI.Navigation.Samples;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace Golf
 {

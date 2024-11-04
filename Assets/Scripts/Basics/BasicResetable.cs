@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 
+/* Copyright (C) Tom Troeger */
+
 namespace Basics
 {
     public class BasicResettable : MonoBehaviour

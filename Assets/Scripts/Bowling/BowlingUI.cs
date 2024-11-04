@@ -1,7 +1,7 @@
-using TMPro;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
+
+/* Copyright (C) Tom Troeger */
 
 namespace Bowling
 {
@@ -20,23 +20,23 @@ namespace Bowling
         // Start is called before the first frame update
         private void Start()
         {
-            _bowlingController = BowlingController.instance;
+            _bowlingController = BowlingController.Instance;
             if (frameDisplayGroup == null)
             {
                 //frameDisplayGroup = GetComponentInChildren<FrameDisplay>().gameObject.GetComponentInParent<GameObject>();
             }
             _frameDisplays = frameDisplayGroup.GetComponentsInChildren<FrameDisplay>();
             
-            _bowlingController.BallRolledEvent += (sender, args) =>
+            _bowlingController.BallRolledEvent += (_, _) =>
             {
                 pinCam.enabled = true;
             };
-            _bowlingController.SoftResetEvent += (sender, args) =>
+            _bowlingController.SoftResetEvent += (_, args) =>
             {
                 pinCam.enabled = false;
                 _frameDisplays[_bowlingController.currentFrame].SetHalfFrame(args);
             };
-            _bowlingController.HardResetEvent += (sender, args) =>
+            _bowlingController.HardResetEvent += (_, args) =>
             {
                 pinCam.enabled = false;
                 _frameDisplays[_bowlingController.currentFrame].SetFullFrame(args);

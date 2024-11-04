@@ -1,22 +1,22 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.Serialization;
+
+/* Copyright (C) Tom Troeger */
 
 namespace Bowling
 {
     public class BowlingController : MonoBehaviour
     {
-        public static BowlingController instance;
+        public static BowlingController Instance;
 
         private void Awake()
         {
-            if (instance == null)
+            if (Instance == null)
             {
-                instance = this;
+                Instance = this;
             }
         }
 
@@ -53,9 +53,9 @@ namespace Bowling
 
         private void Start()
         {
-            _soundFX = SoundFXManager.instance;
-            hardResetAction.action.performed += context => HardReset();
-            softResetAction.action.performed += context => SoftReset();
+            _soundFX = SoundFXManager.Instance;
+            hardResetAction.action.performed += _ => HardReset();
+            softResetAction.action.performed += _ => SoftReset();
             _timer = GetComponent<TimerScript>();
             _timer.TimerComplete = TurnEnd;
             _bowlingScore = new int[10, turnsPerFrame];
@@ -103,7 +103,7 @@ namespace Bowling
 
         private void HardReset()
         {
-            foreach (var pin in pinGroup.GetComponentsInChildren<BownlingPin>(includeInactive: true))
+            foreach (var pin in pinGroup.GetComponentsInChildren<BowlingPin>(includeInactive: true))
             {
                 pin.Reset();
             }
@@ -127,7 +127,7 @@ namespace Bowling
 
         private void SoftReset()
         {
-            foreach (var pin in pinGroup.GetComponentsInChildren<BownlingPin>())
+            foreach (var pin in pinGroup.GetComponentsInChildren<BowlingPin>())
             {
                 pin.Reset();
                 if (_newKnockedPins.Contains(pin.gameObject))
