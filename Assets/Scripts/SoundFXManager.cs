@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class SoundFXManager : MonoBehaviour
 {
     public static SoundFXManager instance;
-    [SerializeField] private AudioSource _soundFXObject;
+    [FormerlySerializedAs("_soundFXObject")] 
+    [SerializeField] public AudioSource soundFXObject;
     [SerializeField] public AudioClip uiSound;
 
     private void Awake()
@@ -20,7 +22,7 @@ public class SoundFXManager : MonoBehaviour
     {
         if (audioClip is null) return;
         //spawn gameObject
-        AudioSource audioSource = Instantiate(_soundFXObject, spawnTransform.position, Quaternion.identity);
+        AudioSource audioSource = Instantiate(soundFXObject, spawnTransform.position, Quaternion.identity);
         
         //assign audioClip and play
         audioSource.clip = audioClip;
@@ -36,7 +38,7 @@ public class SoundFXManager : MonoBehaviour
         int randomIndex = Random.Range(0, audioClips.Length);
         
         //spawn gameObject
-        AudioSource audioSource = Instantiate(_soundFXObject, spawnTransform.position, Quaternion.identity);
+        AudioSource audioSource = Instantiate(soundFXObject, spawnTransform.position, Quaternion.identity);
         
         //assign audioClip and play
         audioSource.clip = audioClips[randomIndex];
