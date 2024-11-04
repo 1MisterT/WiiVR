@@ -1,6 +1,11 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Reflection;
+using Newtonsoft.Json;
+using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.UI;
 
 namespace Menu.Settings
 {
@@ -12,12 +17,12 @@ namespace Menu.Settings
         {
             if (PlayerPrefs.HasKey(nameof(Settings)))
             {
-                settings = JsonUtility.FromJson<Settings>(PlayerPrefs.GetString(nameof(Settings)));
+                settings = JsonConvert.DeserializeObject<Settings>(PlayerPrefs.GetString(nameof(Settings)));
             }
             else
             {
                 settings = new();
-                PlayerPrefs.SetString(nameof(Settings), JsonUtility.ToJson(settings));
+                PlayerPrefs.SetString(nameof(Settings), JsonConvert.SerializeObject(settings));
                 PlayerPrefs.Save();
             }
             
@@ -26,8 +31,7 @@ namespace Menu.Settings
 
         public static void SettingsChanged(string property)
         {
-            Debug.Log($"PropertyChanged: {property}");
-            PlayerPrefs.SetString(nameof(Settings), JsonUtility.ToJson(settings));
+            PlayerPrefs.SetString(nameof(Settings), JsonConvert.SerializeObject(settings));
             PlayerPrefs.Save();
         }
 
@@ -35,10 +39,12 @@ namespace Menu.Settings
         {
             if (obj is null) return;
 
-            var fields = settings.GetType()
+            var fields = obj.GetType()
                 .GetFields(BindingFlags.Public | BindingFlags.Instance)
-                .Where(x => x.GetType().IsSubclassOf(typeof(SettingsModel)))
+                .Where(x => x.FieldType.IsSubclassOf(typeof(SettingsModel)))
                 .ToArray();
+            
+            SetValues(obj);
             
             if (fields.Length == 0) return;
 
@@ -51,9 +57,63 @@ namespace Menu.Settings
             }
         }
 
-        public static void SetValue(object o, string target)
+        private void SetValues(object obj)
         {
+            var properties = obj.GetType()
+                .GetProperties(BindingFlags.Instance | BindingFlags.Public)
+                .Where(pi => pi.GetCustomAttribute<SettingsElementAttribute>() is not null)
+                .ToArray();
+
+            foreach (var property in properties)
+            {
+                var attr = property.GetCustomAttribute<SettingsElementAttribute>()!;
+                var go = GameObject.Find(attr.objectName);
+                if (go is null) continue;
+
+                if (attr.type == typeof(Slider))
+                {
+                    ValueGameObjectBinder<float, Slider>(
+                        property, go, obj,
+                        (input, value) => input.value = value,
+                        input => input.value,
+                        input => input.onValueChanged
+                    );
+                }
+                else if (attr.type == typeof(Toggle))
+                {
+                    ValueGameObjectBinder<bool, Toggle>(
+                        property, go, obj,
+                        (input, value) => input.isOn = value,
+                        input => input.isOn,
+                        input => input.onValueChanged
+                    );
+                }
+                else if (attr.type == typeof(TMP_Dropdown))
+                {
+                    ValueGameObjectBinder<int, TMP_Dropdown>(
+                        property, go, obj,
+                        (input, value) => input.value = value,
+                        input => input.value,
+                        input => input.onValueChanged
+                    );
+                }
+            }
+        }
+
+        private void ValueGameObjectBinder<TValueType, TInputType>(
+            PropertyInfo property, GameObject go, object obj, 
+            Action<TInputType, TValueType> setter, 
+            Func<TInputType, TValueType> getter,
+            Func<TInputType, UnityEvent<TValueType>> @event
+        )
+        {
+            var component = go.GetComponent<TInputType>();
+            setter(component, (TValueType) property.GetValue(obj));
+
+            void SetValue(TValueType value) => property.SetValue(obj, value);
             
+            SetValue(getter(component));
+            @event(component).AddListener(SetValue);
         }
     }
 }
