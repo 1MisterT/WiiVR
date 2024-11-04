@@ -1950,7 +1950,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1150701818}
   m_Layer: 0
-  m_Name: Teleporter
+  m_Name: BowlingTeleporter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
