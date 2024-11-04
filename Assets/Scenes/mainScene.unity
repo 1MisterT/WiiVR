@@ -521,7 +521,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 207cd239a8b8ce7499c1acf466457d07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _soundFXObject: {fileID: 3200831570417803400, guid: 5462a38fef332c14fae5eb3359add710, type: 3}
+  soundFXObject: {fileID: 3200831570417803400, guid: 5462a38fef332c14fae5eb3359add710, type: 3}
   uiSound: {fileID: 8300000, guid: 52763934ebde379458833fa1ef3ac450, type: 3}
 --- !u!4 &856345384
 Transform:
@@ -608,7 +608,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2582266497110461077, guid: 60270aea4310977a2b87f073735f2a65, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.04649635
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2582266497110461077, guid: 60270aea4310977a2b87f073735f2a65, type: 3}
       propertyPath: m_LocalRotation.x
@@ -616,7 +616,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2582266497110461077, guid: 60270aea4310977a2b87f073735f2a65, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.9989185
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2582266497110461077, guid: 60270aea4310977a2b87f073735f2a65, type: 3}
       propertyPath: m_LocalRotation.z
@@ -628,7 +628,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2582266497110461077, guid: 60270aea4310977a2b87f073735f2a65, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -174.67
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2582266497110461077, guid: 60270aea4310977a2b87f073735f2a65, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
