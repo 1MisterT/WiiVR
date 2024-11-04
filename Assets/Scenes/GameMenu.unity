@@ -4667,7 +4667,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35fe4823da3b4d6e871dc3fe2b3e2042, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toggleButton: {fileID: 3525320263253064259, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  toggleButton: {fileID: -3228501087247750605, guid: c348712bda248c246b8c49b3db54643f, type: 3}
 --- !u!4 &1049034417
 Transform:
   m_ObjectHideFlags: 0

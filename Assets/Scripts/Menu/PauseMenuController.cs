@@ -11,23 +11,34 @@ namespace Menu
         [SerializeField] private InputActionReference toggleButton;
         
         private XRController _controller;
+        private GameObject _pMenu;
         
         private void Start()
         {
             var lController = GameObject.Find(ControllerName);
-            var pMenu = GameObject.Find("PauseMenu");
-            pMenu.transform.SetParent(lController.transform, new Vector3(0.25f, 0, 0.5f));
-            pMenu.SetActive(false);
+            _pMenu = GameObject.Find("PauseMenu");
+            _pMenu.transform.SetParent(lController.transform, new Vector3(0.25f, 0, 0.5f));
+            _pMenu.SetActive(false);
 
-            toggleButton.action.performed += context =>
+            toggleButton.action.performed += _ =>
             {
-                pMenu.SetActive(!pMenu.activeSelf);
+                Toggle(!_pMenu.activeSelf);
             };
 
             TeleportAction.OnTeleported += () =>
             {
-                if (pMenu.activeSelf) pMenu.SetActive(false);
+                if (_pMenu.activeSelf) Toggle(false);
             };
         }
+
+        private void Toggle(bool state)
+        {
+            _pMenu.SetActive(state);
+            OnPauseMenuToggled?.Invoke(state);
+        }
+
+        public delegate void PauseMenuEventArgs(bool opened);
+
+        public static event PauseMenuEventArgs OnPauseMenuToggled;
     }
 }
