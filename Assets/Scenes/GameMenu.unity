@@ -256,7 +256,7 @@ GameObject:
   - component: {fileID: 25850178}
   - component: {fileID: 25850177}
   m_Layer: 5
-  m_Name: Dropdown
+  m_Name: Selector_GraphicsQuality_Bindable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -334,11 +334,17 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
+    - m_Text: Sehr Niedrig
+      m_Image: {fileID: 0}
     - m_Text: Niedrig
       m_Image: {fileID: 0}
     - m_Text: Mittel
       m_Image: {fileID: 0}
     - m_Text: Hoch
+      m_Image: {fileID: 0}
+    - m_Text: Sehr Hoch
+      m_Image: {fileID: 0}
+    - m_Text: Ultra
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
@@ -646,7 +652,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Niedrig
+  m_text: Sehr Niedrig
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1541,7 +1547,7 @@ GameObject:
   - component: {fileID: 297817312}
   - component: {fileID: 297817313}
   m_Layer: 5
-  m_Name: Slider
+  m_Name: Slider_Sensitivity_Bindable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4670,7 +4676,7 @@ GameObject:
   - component: {fileID: 1223594180}
   - component: {fileID: 1223594179}
   m_Layer: 5
-  m_Name: Dropdown
+  m_Name: Selector_Resolution_Bindable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5394,7 +5400,7 @@ GameObject:
   - component: {fileID: 1356929623}
   - component: {fileID: 1356929624}
   m_Layer: 5
-  m_Name: Toggle
+  m_Name: Toggle_MouseControl_Bindable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
