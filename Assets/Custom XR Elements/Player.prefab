@@ -567,9 +567,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3282757887710186678}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.002, y: -0.715, z: 0}
-  m_LocalScale: {x: 0.2938244, y: 1.1008, z: 0.50223}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.0019999875, y: -0.71500015, z: 0}
+  m_LocalScale: {x: 0.29382437, y: 1.1008, z: 0.5022299}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8822846124740165365}
@@ -656,8 +656,8 @@ Transform:
   m_LocalScale: {x: 1.0088, y: 0.8207698, z: 0.5205004}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 4171862884203008058}
   - {fileID: 1913414819858443081}
+  - {fileID: 4171862884203008058}
   m_Father: {fileID: 6806641938920744272}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &888990032127983058
@@ -1272,7 +1272,7 @@ MonoBehaviour:
   m_Camera: {fileID: 888990032127983058}
   m_OriginBaseGameObject: {fileID: 6788874415759236500}
   m_CameraFloorOffsetObject: {fileID: 2444052067376625622}
-  m_RequestedTrackingOriginMode: 1
+  m_RequestedTrackingOriginMode: 2
   m_CameraYOffset: 1.1176
 --- !u!143 &1771119751438839763
 CharacterController:
@@ -1296,7 +1296,7 @@ CharacterController:
   m_Height: 1.22
   m_Radius: 0.15
   m_SlopeLimit: 45
-  m_StepOffset: 0.3
+  m_StepOffset: 0.5
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.81, z: -0.64}
