@@ -7,8 +7,6 @@ namespace Golf
 {
     public class DisplayHitScore : MonoBehaviour
     {
-        // private Text _scoreText; // For standard UI Text
-
         public TextMeshProUGUI scoreText; // For TextMeshPro
 
         public GameObject golfBall;
@@ -22,7 +20,7 @@ namespace Golf
                 
                 if (_ball == null)
                 {
-                    Debug.LogError("Ball component not found on the assigned golfBall GameObject.");
+                    Debug.LogError("Ball component not found on the assigned GameObject " + golfBall.name);
                 }
                 else
                 {
