@@ -1,12 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.Serialization;
+
+// Copyright (C) Tom Troeger
 
 [RequireComponent((typeof(Animator)))]
 public class AnimateHandController : MonoBehaviour
 {
+    private static readonly int Trigger = Animator.StringToHash("Trigger");
+    private static readonly int Grip = Animator.StringToHash("Grip");
 
     public InputActionReference gripInputActionReference;
 
@@ -17,13 +18,13 @@ public class AnimateHandController : MonoBehaviour
     
     
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         _handAnimator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         AnimateGrip();
         AnimateTrigger();
@@ -32,12 +33,12 @@ public class AnimateHandController : MonoBehaviour
     private void AnimateTrigger()
     {
         _triggerValue = triggerInputActionReference.action.ReadValue<float>();
-        _handAnimator.SetFloat("Trigger", _triggerValue);
+        _handAnimator.SetFloat(Trigger, _triggerValue);
     }
 
     private void AnimateGrip()
     {
         _gripValue = gripInputActionReference.action.ReadValue<float>();
-        _handAnimator.SetFloat("Grip", _gripValue);
+        _handAnimator.SetFloat(Grip, _gripValue);
     }
 }

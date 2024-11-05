@@ -15,6 +15,7 @@ TagManager:
   - GolfArea
   - Golf
   - PlayerUI
+  - GameCollider
   layers:
   - Default
   - TransparentFX

@@ -52,7 +52,7 @@ namespace Golf
             if (other.CompareTag("GolfHole"))
             {
                 _ball.isInhole = true;
-                SoundFXManager.instance.PlaySoundFX(winSound, gameObject.transform);
+                SoundFXManager.Instance.PlaySoundFX(winSound, gameObject.transform);
                 Debug.Log("GolfBall reached the hole. Needed hits: " +  _ball.hitCount);
             }
 

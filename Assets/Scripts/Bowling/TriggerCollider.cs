@@ -1,30 +1,26 @@
 using UnityEngine;
 
+/* Copyright (C) Tom Troeger */
+
 namespace Bowling
 {
     public class TriggerCollider : MonoBehaviour
     {
         // Start is called before the first frame update
         private BowlingController _bowlingController;
-        public bool triggerTurn = false;
+        public bool triggerTurn;
         private Rigidbody _activeBall;
         void Start()
         {
-            _bowlingController = BowlingController.instance;
-            _bowlingController.SoftResetEvent += (sender, args) =>
+            _bowlingController = BowlingController.Instance;
+            _bowlingController.SoftResetEvent += (_, _) =>
             {
                 _activeBall = null;
             };
-            _bowlingController.HardResetEvent += (sender, args) =>
+            _bowlingController.HardResetEvent += (_, _) =>
             {
                 _activeBall = null;
             };
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-        
         }
 
         private void OnTriggerEnter(Collider other)

@@ -28,7 +28,7 @@ public class RespawnObjects : MonoBehaviour
 
     private void Start()
     {
-        _soundFXManager = SoundFXManager.instance;
+        _soundFXManager = SoundFXManager.Instance;
         _golfBall = GameObject.Find("GolfBall");
         _golfBallChangeLayer = _golfBall.GetComponent<ChangeLayerName>();
         

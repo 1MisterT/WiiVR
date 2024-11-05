@@ -1,36 +1,34 @@
-using System;
 using Basics;
 using UnityEngine;
 
+/* Copyright (C) Tom Troeger */
+
 namespace Bowling
 {
-    public class BownlingPin : BasicResettable
+    public class BowlingPin : BasicResettable
     {
         // Start is called before the first frame update
         [SerializeField]
         [Range(0f,1f)]
         [Tooltip("At what value is the bowling pin counted as knocked down (0 never to 1 always")]
+        private float knockThreshold;
         
-        private float knockTreshold;
-        
-        private Boolean _isKnocked = false;
+        private bool _isKnocked = false;
         private BowlingController _bowlingController;
 
         protected override void Start()
         {
             base.Start();
-            _bowlingController = BowlingController.instance;
+            _bowlingController = BowlingController.Instance;
         }
 
         // Update is called once per frame
-        void FixedUpdate()
+        private void FixedUpdate()
         {
             if (_isKnocked) return;
-            if (Rigidbody.transform.up.y < 0.9f )
-            {
-                _bowlingController.KnockPin(gameObject);
-                _isKnocked = true;
-            }
+            if (!(Rigidbody.transform.up.y < 0.9f)) return;
+            _bowlingController.KnockPin(gameObject);
+            _isKnocked = true;
         }
 
         public override void Reset()

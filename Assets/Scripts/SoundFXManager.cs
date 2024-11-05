@@ -1,20 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Serialization;
+
+// Copyright (C) Tom Troeger
 
 public class SoundFXManager : MonoBehaviour
 {
-    public static SoundFXManager instance;
-    [FormerlySerializedAs("_soundFXObject")] 
-    [SerializeField] public AudioSource soundFXObject;
+    public static SoundFXManager Instance;
+    [SerializeField] private AudioSource soundFXObject;
     [SerializeField] public AudioClip uiSound;
 
     private void Awake()
     {
-        if (instance == null)
+        if (Instance == null)
         {
-            instance = this;
+            Instance = this;
         }
     }
 
@@ -22,30 +20,30 @@ public class SoundFXManager : MonoBehaviour
     {
         if (audioClip is null) return;
         //spawn gameObject
-        AudioSource audioSource = Instantiate(soundFXObject, spawnTransform.position, Quaternion.identity);
+        var audioSource = Instantiate(soundFXObject, spawnTransform.position, Quaternion.identity);
         
         //assign audioClip and play
         audioSource.clip = audioClip;
         audioSource.volume = volume;
         audioSource.Play();
         
-        float clipLenght = audioClip.length;
+        var clipLenght = audioClip.length;
         Destroy(audioSource, clipLenght);
     }
 
     public void PlayRandomSoundFX(AudioClip[] audioClips, Transform spawnTransform, float volume = 1f)
     {
-        int randomIndex = Random.Range(0, audioClips.Length);
+        var randomIndex = Random.Range(0, audioClips.Length);
         
         //spawn gameObject
-        AudioSource audioSource = Instantiate(soundFXObject, spawnTransform.position, Quaternion.identity);
+        var audioSource = Instantiate(soundFXObject, spawnTransform.position, Quaternion.identity);
         
         //assign audioClip and play
         audioSource.clip = audioClips[randomIndex];
         audioSource.Play();
         
         //delete Object after end
-        float clipLenght = audioClips[randomIndex].length;
+        var clipLenght = audioClips[randomIndex].length;
         Destroy(audioSource, clipLenght);
     }
 }

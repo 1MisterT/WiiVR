@@ -29,7 +29,7 @@ namespace Menu.Settings
             set
             {
                 this.SetAndSafeIfChanged(ref _backgroundMusic, value);
-                GameObject.Find("GameMusic").GetComponent<AudioSource>().volume = _backgroundMusic;
+                PlayerController.Instance.mainMixer.SetFloat("MusicVolume", Mathf.Log10(value)* 20);
             }
         }
 
@@ -42,7 +42,7 @@ namespace Menu.Settings
             set
             {
                 this.SetAndSafeIfChanged(ref _soundEffects, value);
-                GameObject.Find("SoundFXManager").GetComponent<SoundFXManager>().soundFXObject.volume = _soundEffects;
+                PlayerController.Instance.mainMixer.SetFloat("SoundFXVolume", Mathf.Log10(value)* 20);
             }
         }
     }
