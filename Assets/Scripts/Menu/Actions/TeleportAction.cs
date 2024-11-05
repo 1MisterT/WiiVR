@@ -12,9 +12,7 @@ namespace Menu.Actions
         // Start is called before the first frame update
         void Start()
         {
-            _player = GameObject.Find(playerName);
-            _target = GameObject.Find(targetName);
-            Debug.Log($"Player: {_player != null}, Target: {_target != null}");
+            
         }
 
         // Update is called once per frame
@@ -25,8 +23,16 @@ namespace Menu.Actions
 
         public override void Execute()
         {
+            _target ??= GameObject.Find(targetName);
+            _player ??= GameObject.Find(playerName);
             var position = _target.transform.position;
+            
+            OnTeleported?.Invoke();
+            
             _player.transform.position = new Vector3(position.x, position.y, position.z);
         }
+
+        public delegate void TeleportedEvent();
+        public static event TeleportedEvent OnTeleported;
     }
 }
