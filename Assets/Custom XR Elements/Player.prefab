@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 136184896890011973}
   m_Layer: 0
   m_Name: PlayerHead
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -554,7 +554,7 @@ GameObject:
   - component: {fileID: 3521222273249229921}
   m_Layer: 0
   m_Name: PlayerBody
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1236,7 +1236,7 @@ GameObject:
   - component: {fileID: 7728738648036705378}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1340,6 +1340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c60c52e68bf275841a9da853c846ab1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainMixer: {fileID: 24100000, guid: 0ca5871b7c1382b4b95a483b2725820a, type: 2}
 --- !u!1 &6866000691291006677
 GameObject:
   m_ObjectHideFlags: 0

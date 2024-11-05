@@ -1,12 +1,11 @@
 using UnityEngine;
-using UnityEngine.Serialization;
 
 // Copyright (C) Tom Troeger
 
 public class SoundFXManager : MonoBehaviour
 {
     public static SoundFXManager Instance;
-    [FormerlySerializedAs("_soundFXObject")] [SerializeField] private AudioSource soundFXObject;
+    [SerializeField] private AudioSource soundFXObject;
     [SerializeField] public AudioClip uiSound;
 
     private void Awake()
