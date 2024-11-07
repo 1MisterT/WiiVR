@@ -12,6 +12,8 @@ public class RespawnObjects : MonoBehaviour
     
     private GameObject _golfBall;
     private Transform _golfBallRoot; // reference the root object of golf ball to adress all its child objects when teleporting it later
+    private Rigidbody _golfBallRigidBody;
+    
     private ChangeLayerName _golfBallChangeLayer;
     private GameObject _golfBallRespawnPoint;
 
@@ -36,6 +38,7 @@ public class RespawnObjects : MonoBehaviour
         _golfGameManager = FindObjectOfType<GolfGameManager>();
         
         _golfBall = GameObject.Find("GolfBall");
+        _golfBallRigidBody = _golfBall.GetComponent<Rigidbody>();
         _golfBallChangeLayer = _golfBall.GetComponent<ChangeLayerName>();
         
         _golfClubs = new List<GameObject>();
@@ -146,6 +149,7 @@ public class RespawnObjects : MonoBehaviour
             _golfBallChangeLayer.targetLayerName = "Default";
             _golfBallChangeLayer.SetLayerRecursively(_golfBall);
             _golfBallRoot.position = _golfBallRespawnPoint.transform.position;
+            _golfBallRigidBody.velocity = Vector3.zero;
             Debug.Log("GolfBall respawned at " + _golfBallRespawnPoint.name);
         }
     }
@@ -162,14 +166,5 @@ public class RespawnObjects : MonoBehaviour
     {
         teleportThisGameObjectTransform.position = customRespawnPoint.transform.position;
         Debug.Log(teleportThisGameObjectTransform.name + " respawned at " + customRespawnPoint.name);
-    }
-    
-    
-    // testing a method that can be invoced by interacting with a button
-    // Problem: Cannot be invoced if it has parameters, so we have to set public Game Objects of the class in the inspector of the button
-    public void RespawnGameObjectTest()
-    {
-        setGameObject.transform.position = setGameObject.transform.position;
-        Debug.Log(setGameObject.name + " respawned at " + setGameObject.name);
     }
 }
