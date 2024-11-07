@@ -8,13 +8,13 @@ using UnityEngine.XR.Management;
 
 public class XRDeviceManager : MonoBehaviour
 {
-    private XRDeviceSimulator simulator;
+    private XRDeviceSimulator _simulator;
 
     // Start is called before the first frame update
     void Start()
     {
-        simulator = FindObjectOfType<XRDeviceSimulator>();
-        if (simulator != null)
+        _simulator = FindObjectOfType<XRDeviceSimulator>();
+        if (_simulator != null)
         {
             DetectXRDevice();
         }
@@ -77,7 +77,7 @@ public class XRDeviceManager : MonoBehaviour
         if (isQuestConnected)
         {
                 // Disable the XR Device Simulator
-                simulator.enabled = false; 
+                _simulator.enabled = false; 
                 Debug.Log("Meta Quest detected: XR Device Simulator disabled.");
             
         }
@@ -109,7 +109,7 @@ public class XRDeviceManager : MonoBehaviour
     
     
     // Dunno if we need these later
-    void DebugMockHMD()
+    void OnDebugMockHmd()
     {
         if (!XRSettings.isDeviceActive)
         {

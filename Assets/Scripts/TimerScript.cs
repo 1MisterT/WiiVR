@@ -1,46 +1,42 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
+
+// Copyright (C) Tom Troeger
 
 public class TimerScript : MonoBehaviour
 {
     // Start is called before the first frame update
-    public Action TimerComplete = () => {};  // Der Callback, der nach Ablauf des Timers ausgeführt wird.
-    private Coroutine _timerCoroutine; // Die laufende Coroutine für den Timer.
+    public Action TimerComplete = () => {};  // Callback after Timer
+    private Coroutine _timerCoroutine; // Timer Routine
     [SerializeField] private float defaultDuration = 10f;
 
-    // Startet oder setzt den Timer zurück
+    // Starts and Resets the Timer
     public void ResetTimer(float timerDuration = 0f)
     {
-        // Wenn bereits eine Coroutine läuft, beende sie
+        // End running Coroutine and start new
         if (_timerCoroutine != null)
         {
             StopCoroutine(_timerCoroutine);
         }
 
-        // Starte eine neue Coroutine
+        // Start new Coroutine
         _timerCoroutine = StartCoroutine(StartTimer(timerDuration == 0 ? defaultDuration : timerDuration));
     }
 
-    // Coroutine, die den Timer überwacht
+    // Coroutine, for Timer
     private IEnumerator StartTimer(float timerDuration)
     {
-        // Warte die Dauer des Timers
+        // Wait and execute Callback
         yield return new WaitForSeconds(timerDuration);
-
-        // Wenn die Wartezeit abgelaufen ist, rufe den Callback auf
         TimerComplete?.Invoke();
     }
 
-    // Optional: Methode zum Abbrechen des Timers (falls notwendig)
+    // Optional: Cancel Timer
     public void CancelTimer()
     {
-        if (_timerCoroutine != null)
-        {
-            StopCoroutine(_timerCoroutine);
-            _timerCoroutine = null;
-        }
+        if (_timerCoroutine == null) return;
+        StopCoroutine(_timerCoroutine);
+        _timerCoroutine = null;
     }
 }

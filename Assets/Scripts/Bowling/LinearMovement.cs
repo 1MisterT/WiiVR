@@ -1,6 +1,6 @@
-﻿using System;
-using Unity.VisualScripting;
-using UnityEngine;
+﻿using UnityEngine;
+
+/* Copyright (C) Tom Troeger */
 
 namespace Bowling
 {
@@ -12,22 +12,17 @@ namespace Bowling
         
         private void OnTriggerEnter(Collider collider)
         {
-            if (collider.attachedRigidbody is not null)
-            {
-                _rigidbody = collider.attachedRigidbody;
-                _rigidbody.angularVelocity = Vector3.zero;
-                _rigidbody.velocity = direction;
-            }
+            if (collider.attachedRigidbody is null) return;
+            _rigidbody = collider.attachedRigidbody;
+            _rigidbody.angularVelocity = Vector3.zero;
+            _rigidbody.velocity = direction;
         }
 
         private void OnTriggerStay(Collider collider)
         {
-            if (collider.attachedRigidbody is not null)
-            {
-                _rigidbody = collider.attachedRigidbody;
-                _rigidbody.velocity = direction;
-
-            }
+            if (collider.attachedRigidbody is null) return;
+            _rigidbody = collider.attachedRigidbody;
+            _rigidbody.velocity = direction;
         }
     }
 }

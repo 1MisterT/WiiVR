@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8950610775167790066}
   m_Layer: 0
   m_Name: handleCube
-  m_TagString: GolfClub
+  m_TagString: GolfClubPart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,8 +28,8 @@ Transform:
   m_GameObject: {fileID: 1104805988651321056}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0023999996, y: 0.2196, z: 0}
-  m_LocalScale: {x: 0.054840524, y: 0.24689473, z: 0.05484052}
+  m_LocalPosition: {x: 0, y: 0.2752, z: 0}
+  m_LocalScale: {x: 0.054840524, y: 0.13922146, z: 0.05484052}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1092151271915240009}
@@ -116,7 +116,7 @@ GameObject:
   - component: {fileID: 6019224243663019270}
   m_Layer: 0
   m_Name: Attach Point
-  m_TagString: GolfClub
+  m_TagString: GolfClubPart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -130,7 +130,7 @@ Transform:
   m_GameObject: {fileID: 2753591068170802984}
   serializedVersion: 2
   m_LocalRotation: {x: 0.5, y: 0.5, z: -0.5, w: 0.5}
-  m_LocalPosition: {x: 0, y: 0.3476, z: 0}
+  m_LocalPosition: {x: 0, y: 0.345, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -163,18 +163,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3486881519443245057}
-  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0.2}
-  m_LocalScale: {x: 0.0011273929, y: 0.0005462146, z: 0.0005816896}
+  m_LocalRotation: {x: 0.5, y: 0.5, z: -0.5, w: 0.5}
+  m_LocalPosition: {x: 0, y: 0, z: -0.206}
+  m_LocalScale: {x: 0.0011273929, y: 0.00080588495, z: 0.0005816896}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1805176538604430372}
   m_Father: {fileID: 1092151271915240009}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 180, z: 90}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0.2636}
-  m_SizeDelta: {x: 300, y: 300}
+  m_AnchoredPosition: {x: -0.006, y: 0.2693871}
+  m_SizeDelta: {x: 300, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &6390320800253909005
 Canvas:
@@ -267,7 +267,7 @@ GameObject:
   - component: {fileID: 7679883259633733431}
   m_Layer: 0
   m_Name: stickCube
-  m_TagString: GolfClub
+  m_TagString: GolfClubPart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -281,8 +281,8 @@ Transform:
   m_GameObject: {fileID: 5746868495162599097}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0024, y: 0, z: 0}
-  m_LocalScale: {x: 0.023860201, y: 0.6845572, z: 0.034539003}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.023860201, y: 0.4490117, z: 0.034539003}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1092151271915240009}
@@ -369,9 +369,12 @@ GameObject:
   - component: {fileID: 1092151271915240009}
   - component: {fileID: 4199813957070135427}
   - component: {fileID: 1606971660035313991}
+  - component: {fileID: 5664665683300110617}
+  - component: {fileID: 1166779248909498079}
+  - component: {fileID: 3405362213732397068}
   m_Layer: 0
   m_Name: GolfClub
-  m_TagString: GolfClub
+  m_TagString: GolfClubRoot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -386,7 +389,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.017, y: 1.205, z: 1.312}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1.6793, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 944436543493579909}
@@ -407,7 +410,7 @@ Rigidbody:
   serializedVersion: 4
   m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_CenterOfMass: {x: 0, y: -0.269, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -423,7 +426,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 1
   m_Constraints: 0
-  m_CollisionDetection: 2
+  m_CollisionDetection: 1
 --- !u!114 &1606971660035313991
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -442,9 +445,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 4294967295
-  m_DistanceCalculationMode: 1
-  m_SelectMode: 1
+    m_Bits: 2
+  m_DistanceCalculationMode: 0
+  m_SelectMode: 0
   m_FocusMode: 1
   m_CustomReticle: {fileID: 0}
   m_AllowGazeInteraction: 0
@@ -569,12 +572,12 @@ MonoBehaviour:
   m_MatchAttachRotation: 1
   m_SnapToColliderVolume: 1
   m_ReinitializeDynamicAttachEverySingleGrab: 1
-  m_AttachEaseInTime: 0.15
-  m_MovementType: 0
+  m_AttachEaseInTime: 0
+  m_MovementType: 1
   m_VelocityDamping: 1
-  m_VelocityScale: 1
+  m_VelocityScale: 0.25
   m_AngularVelocityDamping: 1
-  m_AngularVelocityScale: 1
+  m_AngularVelocityScale: 0.25
   m_TrackPosition: 1
   m_SmoothPosition: 0
   m_SmoothPositionAmount: 8
@@ -588,7 +591,7 @@ MonoBehaviour:
   m_SmoothScaleAmount: 8
   m_TightenScale: 0.1
   m_ThrowOnDetach: 1
-  m_ThrowSmoothingDuration: 0.25
+  m_ThrowSmoothingDuration: 0.3
   m_ThrowSmoothingCurve:
     serializedVersion: 2
     m_Curve:
@@ -604,14 +607,51 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  m_ThrowVelocityScale: 1.5
-  m_ThrowAngularVelocityScale: 1
+  m_ThrowVelocityScale: 0.75
+  m_ThrowAngularVelocityScale: 0.75
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
+--- !u!114 &5664665683300110617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6795926544640373780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 293287fc67186c94ebe9b0a862d5c2b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1166779248909498079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6795926544640373780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd08e97beb3bf0c4c87c164d5737ad5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetLayerName: PassThroughPlane
+--- !u!114 &3405362213732397068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6795926544640373780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a78d2eebbcbbf37498f0a04cfd837ccd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6994845019672157793
 GameObject:
   m_ObjectHideFlags: 0
@@ -623,7 +663,7 @@ GameObject:
   - component: {fileID: 2829333708481095111}
   m_Layer: 0
   m_Name: Center of MASS
-  m_TagString: GolfClub
+  m_TagString: GolfClubPart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -655,9 +695,9 @@ GameObject:
   - component: {fileID: 5482486940150239258}
   - component: {fileID: 2440010771275475512}
   - component: {fileID: 563786715641702055}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: hitCube
-  m_TagString: GolfClub
+  m_TagString: GolfClubPart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -671,8 +711,8 @@ Transform:
   m_GameObject: {fileID: 8348624124679613161}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.022599995, y: -0.34227866, z: 0}
-  m_LocalScale: {x: 0.063385, y: 0.057086, z: 0.055734005}
+  m_LocalPosition: {x: 0.022599995, y: -0.2252, z: 0}
+  m_LocalScale: {x: 0.063385, y: 0.03224217, z: 0.055734005}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1092151271915240009}
@@ -740,7 +780,7 @@ BoxCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
@@ -782,7 +822,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 3, y: 245}
+  m_AnchoredPosition: {x: 3, y: 104.3}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0, y: 0}
 --- !u!222 &7477690965186394598
@@ -848,7 +888,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -876,7 +916,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -141.29677, w: -96.85779}
+  m_margin: {x: 0, y: 0, z: -103.725815, w: -103.49214}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

@@ -4,25 +4,38 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+// Copyright (C) Tom Troeger
+
 public class SceneLoader : MonoBehaviour
 {
-    public static SceneLoader instance;
+    public static SceneLoader Instance;
     // Start is called before the first frame update
-    [SerializeField] private SceneAsset[] initialScenes;
+   
+    #if UNITY_EDITOR
+        [SerializeField] private SceneAsset[] initialScenes;
+    #endif
+    
+    private List<string> _initialScenes = new List<string>();
     
     private void Awake()
     {
-        if (instance == null)
+        if (Instance == null)
         {
-            instance = this;
+            Instance = this;
         }
     }
-    
-    void Start()
+
+    private void Start()
     {
-        foreach (var scene in initialScenes)
+        if (_initialScenes.Count == 0)
         {
-            LoadScene(scene.name);
+            _initialScenes.Add("GameBowling");
+            _initialScenes.Add("GameGolf");
+            _initialScenes.Add("GameMenu");
+        }
+        foreach (var scene in _initialScenes)
+        {
+            LoadScene(scene);
         }
     }
 
@@ -42,9 +55,23 @@ public class SceneLoader : MonoBehaviour
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
 
         // Wait until the asynchronous scene fully loads
-        while (!asyncLoad.isDone)
+        while (asyncLoad is { isDone: false })
         {
             yield return null;
         }
     }
+    
+#if UNITY_EDITOR
+    public void OnAfterDeserialize ( ) => FillScenes ( );
+    public void OnBeforeSerialize ( ) => FillScenes ( );
+    public void OnValidate ( ) => FillScenes ( );
+
+    private void FillScenes ( )
+    {
+        _initialScenes ??= new List<string>();
+        _initialScenes.Clear ( );
+        foreach ( var s in initialScenes )
+            _initialScenes.Add ( s.name );
+    }
+#endif
 }

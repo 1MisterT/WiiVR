@@ -1,7 +1,5 @@
 using TMPro;
-using Unity.AI.Navigation.Samples;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace Golf
 {
@@ -21,7 +19,7 @@ namespace Golf
                 
                 if (_ball == null)
                 {
-                    Debug.LogError("Ball component not found on the assigned golfBall GameObject.");
+                    Debug.LogError("Ball component not found on the assigned GameObject " + golfBall.name);
                 }
                 else
                 {

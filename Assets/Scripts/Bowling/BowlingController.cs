@@ -1,22 +1,23 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
+
+/* Copyright (C) Tom Troeger */
 
 namespace Bowling
 {
     public class BowlingController : MonoBehaviour
     {
-        public static BowlingController instance;
+        public static BowlingController Instance;
 
         private void Awake()
         {
-            if (instance == null)
+            if (Instance == null)
             {
-                instance = this;
+                Instance = this;
             }
         }
 
@@ -34,8 +35,8 @@ namespace Bowling
         [SerializeField] private GameObject ballGroup;
         [SerializeField] private AudioClip[] knockPinSounds;
         [SerializeField] private AudioClip looseSound;
-        [SerializeField] private AudioClip spareSound;
-        [SerializeField] private AudioClip strikeSound;
+        [FormerlySerializedAs("spareSound")] [SerializeField] private AudioClip[] spareSounds;
+        [FormerlySerializedAs("strikeSound")] [SerializeField] private AudioClip[] strikeSounds;
         [SerializeField] private int turnsPerFrame = 2;
         [SerializeField] private int framesPerGame = 10;
         
@@ -53,13 +54,19 @@ namespace Bowling
 
         private void Start()
         {
-            _soundFX = SoundFXManager.instance;
-            hardResetAction.action.performed += context => HardReset();
-            softResetAction.action.performed += context => SoftReset();
+            _soundFX = SoundFXManager.Instance;
+            hardResetAction.action.performed += _ => PerformCustomReset(ResetHard);
+            softResetAction.action.performed += _ => PerformCustomReset(ResetSoft);
             _timer = GetComponent<TimerScript>();
             _timer.TimerComplete = TurnEnd;
             _bowlingScore = new int[10, turnsPerFrame];
             _turn = turnsPerFrame - 1;
+        }
+
+        private static void PerformCustomReset(Action resetFunction)
+        {
+            if (PlayerController.PlayerGame != "Bowling") return;
+            resetFunction.Invoke();
         }
 
         private void TurnEnd()
@@ -68,18 +75,15 @@ namespace Bowling
             //Strike condition
             if (_newKnockedPins.Count == 10 || _turn <= 0)
             {
-                HardReset();
+                ResetHard();
                 return;
             }
             if (currentFrame > framesPerGame - 1)
             {
-                currentFrame = 0;
-                _bowlingScore = new int[10, turnsPerFrame];
-                GameResetEvent?.Invoke(this, EventArgs.Empty);
+                ResetGame();
             }
             _turn--;
-            SoftReset();
-            
+            ResetSoft();
         }
     
         public int pinCounter => _totalKnockedPins?.Count ?? 0 + _newKnockedPins?.Count ?? 0;
@@ -101,33 +105,29 @@ namespace Bowling
             BallRolledEvent?.Invoke(this, EventArgs.Empty);
         }
 
-        private void HardReset()
+        public void ResetHard()
         {
-            foreach (var pin in pinGroup.GetComponentsInChildren<BownlingPin>(includeInactive: true))
+            ResetPin();
+            ResetBall();
+            if (_newKnockedPins != null) _totalKnockedPins.UnionWith(_newKnockedPins);
+            if (currentFrame <= framesPerGame - 1)
             {
-                pin.Reset();
+                _bowlingScore[currentFrame, _turn] = _newKnockedPins?.Count ?? 0;
+                HardResetEvent?.Invoke(this, _totalKnockedPins.Count);
+                currentFrame += 1;
             }
-            foreach (var ball in ballGroup.GetComponentsInChildren<BowlingBall>(includeInactive: true))
+            else
             {
-                ball.Reset();
+                ResetGame();
             }
-            _bowlingScore[currentFrame, _turn] = _newKnockedPins?.Count ?? 0;
-            if (_newKnockedPins != null)
-            {
-                _totalKnockedPins.UnionWith(_newKnockedPins);
-                _newKnockedPins?.Clear();
-            }
-
-            HardResetEvent?.Invoke(this, _totalKnockedPins.Count);
             _totalKnockedPins.Clear();
-            
-            currentFrame += 1;
+            _newKnockedPins?.Clear();
             _turn = turnsPerFrame - 1;
         }
 
-        private void SoftReset()
+        public void ResetSoft()
         {
-            foreach (var pin in pinGroup.GetComponentsInChildren<BownlingPin>())
+            foreach (var pin in pinGroup.GetComponentsInChildren<BowlingPin>())
             {
                 pin.Reset();
                 if (_newKnockedPins.Contains(pin.gameObject))
@@ -135,11 +135,38 @@ namespace Bowling
                     pin.gameObject.SetActive(false);
                 }
             }
-            _bowlingScore[currentFrame, _turn] = _newKnockedPins?.Count ?? 0;
-            _totalKnockedPins.UnionWith(_newKnockedPins);
-            SoftResetEvent?.Invoke(this, _totalKnockedPins.Count);
+
+            if (currentFrame <= framesPerGame - 1)
+            {
+                _bowlingScore[currentFrame, _turn] = _newKnockedPins?.Count ?? 0;
+                _totalKnockedPins.UnionWith(_newKnockedPins);
+                SoftResetEvent?.Invoke(this, _totalKnockedPins.Count);
+            }
             _newKnockedPins?.Clear();
             _activeBall?.Reset();
+        }
+
+        public void ResetGame()
+        {
+            currentFrame = 0;
+            _bowlingScore = new int[10, turnsPerFrame];
+            GameResetEvent?.Invoke(this, EventArgs.Empty);
+        }
+
+        public void ResetBall()
+        {
+            foreach (var ball in ballGroup.GetComponentsInChildren<BowlingBall>(includeInactive: true))
+            {
+                ball.Reset();
+            }
+        }
+        
+        public void ResetPin()
+        {
+            foreach (var pin in pinGroup.GetComponentsInChildren<BowlingPin>(includeInactive: true))
+            {
+                pin.Reset();
+            }
         }
 
         private IEnumerator GetSpecialPinPosition(int totalPins, int newPins)
@@ -147,14 +174,14 @@ namespace Bowling
             if (newPins == 10)
             {
                 SpecialPinEvent?.Invoke(this, SpecialPinPosition.Strike);
-                _soundFX.PlaySoundFX(strikeSound, transform);
+                _soundFX.PlayRandomSoundFX(strikeSounds, transform);
                 yield return null;
             }
 
             if (newPins + totalPins == 10)
             {
                 SpecialPinEvent?.Invoke(this, SpecialPinPosition.Spare);
-                _soundFX.PlaySoundFX(spareSound, transform);
+                _soundFX.PlayRandomSoundFX(spareSounds, transform);
                 yield return null;
             }
 

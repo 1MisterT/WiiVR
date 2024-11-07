@@ -1,10 +1,9 @@
-using System;
 using Basics;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.XR.Interaction.Toolkit;
+
+/* Copyright (C) Tom Troeger */
 
 namespace Bowling
 {
@@ -27,7 +26,7 @@ namespace Bowling
             _grabInteractable = GetComponent<XRGrabInteractable>();
             _massScale = massDisplay.GetComponentInChildren<TextMeshProUGUI>();
             _audioSource = GetComponent<AudioSource>();
-            _soundFXManager = SoundFXManager.instance;
+            _soundFXManager = SoundFXManager.Instance;
         }
 
         // Update is called once per frame
@@ -42,7 +41,7 @@ namespace Bowling
                 massDisplay.gameObject.SetActive(true);
                 _audioSource.mute = true;
             }
-            _audioSource.volume = Mathf.Clamp(Rigidbody.velocity.magnitude, 0, 1);
+            _audioSource.volume = Mathf.Log10(Mathf.Clamp(Rigidbody.angularVelocity.magnitude*2, 0.001f, 1)) * 20;
             if (!Mathf.Approximately(ballMass, Rigidbody.mass))
                 ChangeBallMass();
         }
@@ -70,6 +69,7 @@ namespace Bowling
 
         private void OnCollisionEnter(Collision other)
         {
+            if (other.gameObject.CompareTag("Player")) return;
             _audioSource.mute = false;
         }
     }
