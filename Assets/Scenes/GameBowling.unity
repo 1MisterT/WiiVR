@@ -1948,8 +1948,13 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 89e8adbc314e0a7f5927bcc89fd3bbcc, type: 3}
   - {fileID: 8300000, guid: 8b4ca03d6b22a732695a4f4f4ca15b1e, type: 3}
   looseSound: {fileID: 8300000, guid: d7792b0d86f77f148a638b15e5fae48e, type: 3}
-  spareSound: {fileID: 8300000, guid: 9c5e6c0dc09566d429a65e20e9d6a5d7, type: 3}
-  strikeSound: {fileID: 8300000, guid: b41bc73bbb2ff764bbeebd482a5dce74, type: 3}
+  spareSounds:
+  - {fileID: 8300000, guid: 9c5e6c0dc09566d429a65e20e9d6a5d7, type: 3}
+  - {fileID: 8300000, guid: 35fc351ef86e31f41918fa4fdfb8339a, type: 3}
+  strikeSounds:
+  - {fileID: 8300000, guid: 8e5e084741a5ea548be0d7949b4160a6, type: 3}
+  - {fileID: 8300000, guid: b41bc73bbb2ff764bbeebd482a5dce74, type: 3}
+  - {fileID: 8300000, guid: 35fc351ef86e31f41918fa4fdfb8339a, type: 3}
   turnsPerFrame: 2
   framesPerGame: 10
   currentFrame: 0

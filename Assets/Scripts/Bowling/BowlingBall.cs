@@ -41,7 +41,7 @@ namespace Bowling
                 massDisplay.gameObject.SetActive(true);
                 _audioSource.mute = true;
             }
-            _audioSource.volume = Mathf.Clamp(Rigidbody.velocity.magnitude, 0, 1);
+            _audioSource.volume = Mathf.Log10(Mathf.Clamp(Rigidbody.angularVelocity.magnitude*2, 0.001f, 1)) * 20;
             if (!Mathf.Approximately(ballMass, Rigidbody.mass))
                 ChangeBallMass();
         }

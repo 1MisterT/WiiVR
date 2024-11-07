@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 
 /* Copyright (C) Tom Troeger */
 
@@ -34,8 +35,8 @@ namespace Bowling
         [SerializeField] private GameObject ballGroup;
         [SerializeField] private AudioClip[] knockPinSounds;
         [SerializeField] private AudioClip looseSound;
-        [SerializeField] private AudioClip spareSound;
-        [SerializeField] private AudioClip strikeSound;
+        [FormerlySerializedAs("spareSound")] [SerializeField] private AudioClip[] spareSounds;
+        [FormerlySerializedAs("strikeSound")] [SerializeField] private AudioClip[] strikeSounds;
         [SerializeField] private int turnsPerFrame = 2;
         [SerializeField] private int framesPerGame = 10;
         
@@ -173,14 +174,14 @@ namespace Bowling
             if (newPins == 10)
             {
                 SpecialPinEvent?.Invoke(this, SpecialPinPosition.Strike);
-                _soundFX.PlaySoundFX(strikeSound, transform);
+                _soundFX.PlayRandomSoundFX(strikeSounds, transform);
                 yield return null;
             }
 
             if (newPins + totalPins == 10)
             {
                 SpecialPinEvent?.Invoke(this, SpecialPinPosition.Spare);
-                _soundFX.PlaySoundFX(spareSound, transform);
+                _soundFX.PlayRandomSoundFX(spareSounds, transform);
                 yield return null;
             }
 
