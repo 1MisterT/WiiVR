@@ -41,6 +41,7 @@ namespace Golf
             _golfPlayerUI = FindObjectsWithTagContaining("PlayerUI");
             
             golfBall = GameObject.Find("GolfBall");
+            _ball = golfBall.GetComponent<Ball>();
             golfClub = GameObject.Find("RealisticGolfClub");
             
             // find the golf holes and store them in a list

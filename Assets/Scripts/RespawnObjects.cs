@@ -46,9 +46,9 @@ public class RespawnObjects : MonoBehaviour
         
         if (_golfBallRespawnPoint == null)
         {
-            _golfBallRespawnPoint = GameObject.Find("GolfBallRespawnArea").GetNamedChild("GolfBallRespawnPoint");
+            _golfBallRespawnPoint = GameObject.Find("GolfBallRespawnArea").GetNamedChild("RespawnPoint");
 
-            if (respawnPoint == null)
+            if (_golfBallRespawnPoint == null)
             {
                 Debug.LogError("No respawn point for respawning objects set in inspector nor could find one in the scene");
             }
@@ -57,7 +57,7 @@ public class RespawnObjects : MonoBehaviour
         
         if (_golfClubRespawnPoint == null)
         {
-            _golfClubRespawnPoint = GameObject.Find("GolfClubRespawnArea").GetNamedChild("GolfClubSpawnPoint");
+            _golfClubRespawnPoint = GameObject.Find("GolfClubRespawnArea").GetNamedChild("RespawnPoint");
 
             if (_golfClubRespawnPoint == null)
             {

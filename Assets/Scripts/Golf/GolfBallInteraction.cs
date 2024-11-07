@@ -14,7 +14,6 @@ namespace Golf
         private Renderer _golfBallRenderer;
      
         private GolfGameManager _golfGameManager;
-        private DisplayHitScore _displayHitScore;
 
         private GolfHole _activeGolfHole;
 
@@ -39,7 +38,6 @@ namespace Golf
             _ball = _golfBallRoot.GetComponent<Ball>();
             
             _golfGameManager = GameObject.Find("GolfGameManager").GetComponent<GolfGameManager>();
-            _displayHitScore = GameObject.Find("GolfClubCanvas").GetComponent<DisplayHitScore>();
             
             _changeLayerName = _golfBallRoot.GetComponent<ChangeLayerName>();
             _registerHit = gameObject.GetComponent<RegisterBallHit>();
@@ -53,12 +51,11 @@ namespace Golf
            {
                _registerHit.RegisterHitLog();
            }
-           _displayHitScore.DisplayHitCount();
 
            if (other.gameObject.CompareTag("GolfHole"))
            {
                 _ball.isInhole = true;
-                SoundFXManager.instance.PlaySoundFX(winSound, gameObject.transform);
+                SoundFXManager.Instance.PlaySoundFX(winSound, gameObject.transform);
                _golfGameManager.RestartGame();
            }
         }

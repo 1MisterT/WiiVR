@@ -19,7 +19,7 @@ namespace Golf
         private GolfGameManager _golfGameManager;
         
         // reference the DisplayHitScore to enable and disable the GolfClub UI
-        private DisplayHitScore _displayHitScore;
+        [SerializeField] private DisplayHitScore _displayHitScore;
 
         // reference the ChangeLayerName script
         private ChangeLayerName _changeLayerName;
@@ -39,7 +39,7 @@ namespace Golf
         void Start()
         {
             _golfGameManager = FindObjectOfType<GolfGameManager>();
-            _displayHitScore = GameObject.Find("GolfClubCanvas").GetComponent<DisplayHitScore>();
+            if (_displayHitScore is null) _displayHitScore = GameObject.Find("GolfClubCanvas").GetComponent<DisplayHitScore>();
             
             _rb = GetComponent<Rigidbody>();
             

@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 
@@ -19,7 +20,7 @@ namespace Golf
                 
                 if (_ball == null)
                 {
-                    Debug.LogError("Ball component not found on the assigned GameObject " + golfBall.name);
+                    Debug.LogError("Ball component not found on the assigned GameObject " + _golfBall.name);
                 }
                 else
                 {
@@ -36,7 +37,12 @@ namespace Golf
         {
             scoreText.text = "Golfschläge: " + _ball.hitCount; // Update the UI text with the public value
         }
-        
+
+        private void FixedUpdate()
+        {
+            DisplayHitCount();
+        }
+
         // check the isInHole property of the Ball-Object and display a victory text if it is true
         public void DisplayVictoryText()
         {
