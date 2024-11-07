@@ -6,6 +6,7 @@ namespace Golf
     {
         private const float HitCooldown = 1f; // 1 second cooldown
         private float _lastHitTime;
+        [SerializeField] private AudioClip _hitSound;
         
         private Ball _ball;
 
@@ -33,6 +34,7 @@ namespace Golf
                 _ball.hitCount++; // Increment hit counter
                 Debug.Log("Golf ball hit!");
                 Debug.Log("Current amount of hits: " + _ball.hitCount);
+                if(_hitSound != null) SoundFXManager.Instance.PlaySoundFX(_hitSound, gameObject.transform);
             }
         }
     }
