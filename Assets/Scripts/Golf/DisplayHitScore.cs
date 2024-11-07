@@ -7,18 +7,17 @@ namespace Golf
 {
     public class DisplayHitScore : MonoBehaviour
     {
-        // private Text _scoreText; // For standard UI Text
-
         public TextMeshProUGUI scoreText; // For TextMeshPro
 
-        public GameObject golfBall;
+        private GameObject _golfBall;
         private Ball _ball; // assign in inspector or find in start()
 
         private void Start()
         { 
-            if (golfBall != null)
+            _golfBall = GameObject.Find("GolfBall");
+            if (_golfBall != null)
             {
-                _ball = golfBall.GetComponent<Ball>();
+                _ball = _golfBall.GetComponent<Ball>();
                 
                 if (_ball == null)
                 {
@@ -34,35 +33,26 @@ namespace Golf
             }
         }
 
-        private void FixedUpdate()
-        {
-            if (_ball != null)
-            {
-               DisplayHitCount();
-
-               if (_ball.isInhole)
-               {
-                   DisplayVictoryText();
-               }
-            }
-            else
-            {
-                Debug.LogWarning("Ball reference is null.");
-            }
-            
-            
-        }
-
         // check hitcount the Ball-Object
-        private void DisplayHitCount()
+        public void DisplayHitCount()
         {
             scoreText.text = "Golfschläge: " + _ball.hitCount; // Update the UI text with the public value
         }
         
         // check the isInHole property of the Ball-Object and display a victory text if it is true
-        private void DisplayVictoryText()
+        public void DisplayVictoryText()
         {
-            scoreText.text = "Der Ball ist im Golfloch! Benötigte Schläge: " +  _ball.hitCount;
+            scoreText.text = "Der Ball ist im Golfloch!\n\nBenötigte Schläge: " +  _ball.hitCount;
+        }
+
+        public void EnableUI()
+        {
+            gameObject.SetActive(true);
+        }
+
+        public void DisableUI()
+        {
+            gameObject.SetActive(false);
         }
     }
 }

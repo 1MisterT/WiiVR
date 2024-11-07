@@ -14,6 +14,12 @@ namespace Golf
         private Rigidbody _rb;
 
         private XRGrabInteractable _grabInteract;
+        
+        // reference the GolfGameManager to start the game efficiently
+        private GolfGameManager _golfGameManager;
+        
+        // reference the DisplayHitScore to enable and disable the GolfClub UI
+        private DisplayHitScore _displayHitScore;
 
         // reference the ChangeLayerName script
         private ChangeLayerName _changeLayerName;
@@ -23,21 +29,22 @@ namespace Golf
 
         // provided in the inspector of ChangeLayerName
         private string _targetLayerName;
+        
 
         // public get but private set in order to provide the state of the interactable to trigger events when it is grabbed
         // initially false until it is grabbed
-        public bool isGrabbed { get; private set; } = false;
+        public bool isGrabbed { get; private set; }
         
 
         void Start()
         {
-            if (gameObject.name == "GolfClub")
-            {
-                Debug.Log("Initializing Golf Club Setup");
-            }
-
+            _golfGameManager = FindObjectOfType<GolfGameManager>();
+            _displayHitScore = GameObject.Find("GolfClubCanvas").GetComponent<DisplayHitScore>();
+            
             _rb = GetComponent<Rigidbody>();
+            
             _grabInteract = gameObject.GetComponent<XRGrabInteractable>(); // get the XR Grab Interactable component
+            
             _changeLayerName = gameObject.GetComponent<ChangeLayerName>(); // get the ChangeLayerName component to use its methods
             
             EnableKinematic(); // Enable isKinematic so the objects floats before you grab it for the first time
@@ -55,10 +62,19 @@ namespace Golf
 
         // change layer names of parent and child objects
         // set isGrabbed to true
+        // the golf club also starts the golf game so we need to access the GolfGameManager to change the gameStarted property
         void OnGrab(SelectEnterEventArgs args)
         {
             Debug.Log(gameObject.name + " is grabbed, changed parent and child layer names to " + _targetLayerName);
             isGrabbed = true;
+            _displayHitScore.EnableUI();
+            _displayHitScore.DisplayHitCount();
+            
+            if (!_golfGameManager.gameStarted)
+            {
+                _golfGameManager.StartGame();
+            }
+            
             if (_rb.isKinematic)
             {
                 DisableKinematic();
@@ -79,6 +95,9 @@ namespace Golf
         {
             Debug.Log(gameObject.name + " is released, changed parent and child layer name back to: " + _currentLayerName);
             isGrabbed = false;
+            _displayHitScore.DisableUI();
+            _displayHitScore.DisplayHitCount();
+            
             if (_currentLayerName != _targetLayerName)
             {
                 // restore the previous layer names when grab interactable is released
