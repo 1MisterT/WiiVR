@@ -11,9 +11,10 @@ namespace Golf
         // we need to make sure, that this script runs before any other script that accesses the objects within this manager
         // in order to do this, we need to configure the Script Execution Order
         // Edit > Project Settings > Scrip Execution Order
-        private List <GameObject> _golfObjectList;
+        public  List <GameObject> golfObjectList { get; private set; }
         private List<GameObject> _golfHoleList;
         private List <GameObject> _golfPlayerUI;
+        public List<GameObject> golfClubList { get; private set; }
         
         private GameObject _startingGolfHole;
         private GameObject _golfHole;
@@ -34,7 +35,13 @@ namespace Golf
 
         void Start()
         {
-            _golfObjectList = FindObjectsWithTagContaining("Golf");
+            golfObjectList = new List<GameObject>();
+            golfClubList = new List<GameObject>();
+            _golfHoleList = new List<GameObject>();
+                  
+            golfObjectList = FindObjectsWithTagContaining("Golf");
+            golfClubList = FindObjectsWithTagContaining("GolfClubRoot");
+            _golfHoleList = FindObjectsWithTagContaining("GolfHole");
             
             _grabInteractableSetup = FindObjectOfType<GrabInteractableSetup>();
             
@@ -44,8 +51,14 @@ namespace Golf
             _ball = golfBall.GetComponent<Ball>();
             golfClub = GameObject.Find("RealisticGolfClub");
             
+            // find the golf clubs and store them in a list
+            //golfClubList = golfObjectList.Where(golfClubs => golfClubs.CompareTag("GolfClubRoot")).ToList();
             // find the golf holes and store them in a list
-            _golfHoleList = _golfObjectList.Where(golfHole => golfHole.name.Contains("GolfHole")).ToList();
+            //_golfHoleList = golfObjectList.Where(golfHole => golfHole.name.Contains("GolfHole")).ToList();
+            foreach (GameObject golfClubs in golfClubList)
+            {
+                Debug.Log(golfClubs.name);
+            }
             
             _respawnObjects = FindObjectOfType<RespawnObjects>();
             
@@ -85,7 +98,7 @@ namespace Golf
         }
         
         // method to get every objects that returns all active Game Objects in the scene and filters them by their Tag if they contain a certain fragment of the Tag name
-        List<GameObject> FindObjectsWithTagContaining(string keyword)
+        public List<GameObject> FindObjectsWithTagContaining(string keyword)
         {
             List<GameObject> matchingObjects = new List<GameObject>();
 

@@ -1,9 +1,13 @@
+using System.Collections.Generic;
+using System.Linq;
 using Golf;
 using Unity.XR.CoreUtils;
 using UnityEngine;
 
 public class RespawnObjects : MonoBehaviour
 {
+    private GolfGameManager _golfGameManager;
+    
     public GameObject respawnPoint;
     
     private GameObject _golfBall;
@@ -13,7 +17,8 @@ public class RespawnObjects : MonoBehaviour
 
     public GameObject setGameObject;
     public GameObject setRespawnPoint;
-    
+
+    private List<GameObject> _golfClubs;
     private GameObject _golfClub;
     private Transform _golfClubRoot; // the same process as _golfBallRoot
     private GameObject _golfClubRespawnPoint;
@@ -28,13 +33,16 @@ public class RespawnObjects : MonoBehaviour
     private void Start()
     {
         _soundFXManager = SoundFXManager.Instance;
+        _golfGameManager = FindObjectOfType<GolfGameManager>();
+        
         _golfBall = GameObject.Find("GolfBall");
         _golfBallChangeLayer = _golfBall.GetComponent<ChangeLayerName>();
         
+        _golfClubs = new List<GameObject>();
         _golfClub = GameObject.Find("GolfClub");
         if (_golfClub == null)
         {
-            _golfClub = GameObject.Find("SimpleGolfClub");
+            _golfClub = GameObject.Find("RealisticGolfClub");
         }
        
         _grabInteractableSetup = _golfClub.GetComponent<GrabInteractableSetup>();
@@ -101,21 +109,31 @@ public class RespawnObjects : MonoBehaviour
     public void RespawnGolfCLub()
     {
         _soundFXManager.PlaySoundFX(_soundFXManager.uiSound, gameObject.transform);
-        // Check if golfClubRoot is specifically the golf club (or adjust to use GolfClubRoot directly)
-        if (_golfClubRoot.CompareTag("GolfClubRoot"))
+        
+        _golfClubs = _golfGameManager.golfClubList;
+        
+        // take the Transform of all golf clubs in the scene and transform them to a set respawnPoint
+        foreach (GameObject golfClubGameObject in _golfClubs)
         {
-            _golfClubRoot.position = _golfClubRespawnPoint.transform.position; // Move the entire golf club to the respawn point
+            GrabInteractableSetup interactableSetup = golfClubGameObject.GetComponent<GrabInteractableSetup>();
+            Transform golfClubTransform = golfClubGameObject.transform;
+            
+            golfClubTransform.transform.position = _golfClubRespawnPoint.transform.position;
+            
             // make object kinematic and set rotation to 0 so you can grab it properly
-            _grabInteractableSetup.EnableKinematic();
-            if (_golfClubRoot.name == "GolfClub")
+            interactableSetup.EnableKinematic();
+            
+            if (golfClubGameObject.name == "GolfClub")
             {
-                _golfClubRoot.rotation = Quaternion.Euler(0, 0, 0);
+                golfClubTransform.rotation = Quaternion.Euler(0, 0, 0);
+                golfClubTransform.position += new Vector3(0.3f, 0, 0);
             }
             else
             {
-                _golfClubRoot.rotation = Quaternion.Euler(-90, 180, 0);
+                golfClubTransform.rotation = Quaternion.Euler(-90, 180, 0);
+                golfClubTransform.position += new Vector3(-0.3f, 0, 0);
             }
-            
+        
             Debug.Log("Golf Club respawned at " + _golfClubRespawnPoint.name);
         }
     }
