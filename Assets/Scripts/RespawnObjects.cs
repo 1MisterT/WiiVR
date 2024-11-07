@@ -22,7 +22,6 @@ public class RespawnObjects : MonoBehaviour
     private GameObject _collidingGameObject;
 
     private GrabInteractableSetup _grabInteractableSetup;
-    private GolfGameManager.IRespawn _respawnImplementation;
     
     private SoundFXManager _soundFXManager;
 
@@ -35,7 +34,7 @@ public class RespawnObjects : MonoBehaviour
         _golfClub = GameObject.Find("GolfClub");
         if (_golfClub == null)
         {
-            _golfClub = GameObject.Find("RealisticGolfClub");
+            _golfClub = GameObject.Find("SimpleGolfClub");
         }
        
         _grabInteractableSetup = _golfClub.GetComponent<GrabInteractableSetup>();
@@ -47,7 +46,7 @@ public class RespawnObjects : MonoBehaviour
         
         if (_golfBallRespawnPoint == null)
         {
-            _golfBallRespawnPoint = GameObject.Find("GolfBallRespawnArea").GetNamedChild("RespawnPoint");
+            _golfBallRespawnPoint = GameObject.Find("GolfBallRespawnArea").GetNamedChild("GolfBallRespawnPoint");
 
             if (respawnPoint == null)
             {
@@ -58,7 +57,7 @@ public class RespawnObjects : MonoBehaviour
         
         if (_golfClubRespawnPoint == null)
         {
-            _golfClubRespawnPoint = GameObject.Find("GolfClubRespawnArea").GetNamedChild("RespawnPoint");
+            _golfClubRespawnPoint = GameObject.Find("GolfClubRespawnArea").GetNamedChild("GolfClubSpawnPoint");
 
             if (_golfClubRespawnPoint == null)
             {

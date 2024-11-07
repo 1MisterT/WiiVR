@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace Golf
@@ -8,12 +9,15 @@ namespace Golf
         private float _lastHitTime;
         
         private Ball _ball;
+        private GolfGameManager _gameManager;
 
         private void Start()
         {
             _ball = gameObject.GetComponent<Ball>();
+            _gameManager = GameObject.Find("GolfGameManager").GetComponent<GolfGameManager>();
         }
         
+
         // Method that sets cooldown after the ball was hit
         public bool CanRegisterHit()
         {

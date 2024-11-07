@@ -76,6 +76,12 @@ namespace Golf
             
             Debug.Log("Game Over!");
         }
+
+        public void RestartGame()
+        {
+            _ball.hitCount = 0;
+            _respawnObjects.RespawnGolfBall();
+        }
         
         // method to get every objects that returns all active Game Objects in the scene and filters them by their Tag if they contain a certain fragment of the Tag name
         List<GameObject> FindObjectsWithTagContaining(string keyword)

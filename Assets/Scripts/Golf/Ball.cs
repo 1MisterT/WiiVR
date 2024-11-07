@@ -20,7 +20,6 @@ namespace Golf
         public bool isIdle { get; private set; }
         public bool isMoving { get; private set; }
         private bool _wasMoving;
-        
 
         private Rigidbody _rigidbody;
         private Collider[] _colliderList;
@@ -67,28 +66,29 @@ namespace Golf
         // preventing overlap and false hits
         // This kinda fixes the issue of the ball-hit-registration being very inconsisent and makes the hit detection more reliable (still not 100% accurate registration)
         // need to be careful with this
-        private IEnumerator CheckMovementCoroutine()
-        {
-            // in this context it is okay to use while (true) because we are using a Coroutine in Unity in combination with yield statements
-            // We just have to make sure that the Coroutine lifecycle no longer exists when it is not needed
-            while (true)
-            {
-                // Wait for a specified interval
-                yield return new WaitForSeconds(0.5f); // Check every half second
+       private IEnumerator CheckMovementCoroutine()
+       {
+           // in this context it is okay to use while (true) because we are using a Coroutine in Unity in combination with yield statements
+           // We just have to make sure that the Coroutine lifecycle no longer exists when it is not needed
+           while (true)
+           {
+               // Wait for a specified interval
+               yield return new WaitForSeconds(0.5f); // Check every half second
 
                 TrackMovement(); // Call your movement check logic here
             }
         }
         
+       // canHit accesses the ball hit registration to check if the cooldown has passed after detecting a hit
+        
         private void TrackMovement()
         {
             // Check if the ball is moving based on its velocity magnitude
-            isMoving = _rigidbody.velocity.magnitude >= 0.02f;
+            isMoving = _rigidbody.velocity.magnitude > 0.1f;
 
             // Check if the movement state has changed
             if (isMoving != _wasMoving)
             {
-                isIdle = !isMoving;
                 Debug.Log($@"{name} {(isMoving ? "is moving" : "stopped moving")}");
             }
 
@@ -119,16 +119,6 @@ namespace Golf
                     triggerCollider = col;
                 }
             }
-        }
-
-        private void DisableCollider(Collider collider)
-        {
-            collider.enabled = false;
-        }
-
-        private void EnableCollider(Collider collider)
-        {
-            collider.enabled = true;
         }
 
         private void OnDestroy()
