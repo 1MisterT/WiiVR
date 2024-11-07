@@ -1,16 +1,17 @@
 using UnityEngine;
 
-public class GolfHole : MonoBehaviour
+namespace Golf
 {
-    // Start is called before the first frame update
-    void Start()
+    public class GolfHole : MonoBehaviour
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
+        private bool _isActive = false;
+    
+    
+    
+        void Start()
+        {
+            
+        }
         
     }
 }

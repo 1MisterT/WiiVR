@@ -10,8 +10,13 @@ namespace Golf
     {
         private GameObject _golfBallRoot;
         private GameObject _golfBallMesh;
+        private Rigidbody _golfBallRigidBody;
         private Renderer _golfBallRenderer;
      
+        private GolfGameManager _golfGameManager;
+        private DisplayHitScore _displayHitScore;
+
+        private GolfHole _activeGolfHole;
 
         public Material moveMaterial; // reference wanted material for the golf ball in the inspector
         public Material stopMaterial;
@@ -27,41 +32,20 @@ namespace Golf
         void Start()
         {
             _golfBallRoot = GameObject.FindWithTag("GolfBallRoot");
+            _golfBallRigidBody = _golfBallRoot.GetComponent<Rigidbody>();
             _golfBallMesh = _golfBallRoot.GetNamedChild("GolfBallMesh");
             _golfBallRenderer = _golfBallMesh.GetComponent<Renderer>();
+            
             _ball = _golfBallRoot.GetComponent<Ball>();
+            
+            _golfGameManager = GameObject.Find("GolfGameManager").GetComponent<GolfGameManager>();
+            _displayHitScore = GameObject.Find("GolfClubCanvas").GetComponent<DisplayHitScore>();
             
             _changeLayerName = _golfBallRoot.GetComponent<ChangeLayerName>();
             _registerHit = gameObject.GetComponent<RegisterBallHit>();
         }
 
-        void FixedUpdate()
-        {
-          if (!_ball.isMoving || _ball.isHitable)
-          {
-              OnStopMoving();
-          }
-          else
-          {
-              OnMoving();
-          }
-        }
-
-        private void OnTriggerStay(Collider other)
-        {
-            if (other.CompareTag("GolfHole"))
-            {
-                _ball.isInhole = true;
-                SoundFXManager.Instance.PlaySoundFX(winSound, gameObject.transform);
-                Debug.Log("GolfBall reached the hole. Needed hits: " +  _ball.hitCount);
-            }
-
-            if (other.CompareTag("GolfClubPart") && _ball.isMoving)
-            {
-                _ball.isHitable = false;
-            }
-        }
-
+        
         // register the hit and count the hits
         private void OnCollisionEnter(Collision other)
         {
@@ -69,8 +53,20 @@ namespace Golf
            {
                _registerHit.RegisterHitLog();
            }
+           _displayHitScore.DisplayHitCount();
+
+           if (other.gameObject.CompareTag("GolfHole"))
+           {
+                _ball.isInhole = true;
+                SoundFXManager.instance.PlaySoundFX(winSound, gameObject.transform);
+               _golfGameManager.RestartGame();
+           }
         }
 
+        void FixedUpdate()
+        {
+            MakeTouchable();
+        }
         // Method that makes the golf ball untouchable while it is moving
         void OnMoving()
         {
